@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
-import Nav from './Nav'
+import Nav from './Nav';
 import CardListContainer from '../containers/CardListContainer';
 
 
@@ -25,6 +25,6 @@ export default class App extends Component {
           render={()=><div>login ya punk!</div>}
         />
       </div>
-    )
+    );
   }
 }
