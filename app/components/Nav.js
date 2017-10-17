@@ -14,7 +14,7 @@ const Nav = () => {
         Favorites
       </Link>
     </div>
-  )
-}
+  );
+};
 
 export default Nav;

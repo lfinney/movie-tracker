@@ -10,6 +10,6 @@ export default class CardList extends Component {
       <div onClick={()=>this.props.fetchMovieData()}>
       MOVIES
       </div>
-    )
+    );
   }
 }
