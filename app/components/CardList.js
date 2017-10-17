@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class CardList extends Component {
   constructor() {
@@ -13,3 +14,7 @@ export default class CardList extends Component {
     );
   }
 }
+
+CardList.propTypes = {
+  fetchMovieData: PropTypes.func
+};
