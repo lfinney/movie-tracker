@@ -1,4 +1,4 @@
-export const fetchData = (apiUrl) => ({
+export const fetchData = (apiResult) => ({
     type: 'GET_INIT_DATA',
-    apiUrl
+    apiResult
 })

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import { fetchCurrentMovies } from '../helpers/fetchMovieData'
+import CardListContainer from '../containers/CardListContainer';
 
 
 export default class App extends Component {
@@ -8,14 +7,10 @@ export default class App extends Component {
     super();
   }
 
-  componentDidMount() {
-    fetchCurrentMovies();
-  }
-
   render() {
     return (
       <div>
-        <CardList />
+        <CardListContainer />
         <h1>Movie Watcher</h1>
         <h1>Movie Watcher</h1>
       </div>
