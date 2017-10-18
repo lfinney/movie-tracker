@@ -6,16 +6,18 @@ import {
 const checkForUserHelper = (userDataObject) => {
   return dispatch => {
     // this fucking works!
-    // fetch('/api/users').then(res => res.json()).then(res => console.log(res))
+    fetch('/api/users').then(res => res.json()).then(res => console.log(res))
   //   fetch('/api/users', {
   //     method: 'POST',
-  //     body: JSON.stringify(userDataObject),
+  //     body: userDataObject,
   //     headers: {
   //       'Content-Type': 'application/json'
   //     }
   //   })
-  //     .then(wut => console.log(wut.json()));
-  // };
+  //     .then(wut => wut.json())
+  //     .then(wut => console.log(wut))
+  //     .catch(err => console.log('ya fucked up', err))
+  };
 };
   //take in the user object and check it agains the backend
   // use fetch to send to backend

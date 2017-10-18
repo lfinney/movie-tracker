@@ -4,23 +4,33 @@ export default class UserForm extends Component {
   constructor() {
     super()
     this.state = {
-
+      email: '',
+      password: ''
     }
   }
 
-  yo() {
-    console.log(this.props);
+  handleInputs(key, event) {
+    this.setState({[key]: event.target.value})
   }
 
   render() {
     return (
       <form>
-        <input type="text" placeholder="email" />
-        <input type="text" placeholder="password" />
+        <input
+          type="text"
+          placeholder="email"
+          value={this.state.email}
+          onChange={ (event) => this.handleInputs('email', event) }
+        />
+        <input
+          type="text"
+          placeholder="password"
+          value={this.state.password}
+          onChange={ (event) => this.handleInputs('password', event) }
+        />
         <button type="submit" onClick={ (event) => {
           event.preventDefault();
-          this.yo()
-          this.props.verifyUserLogin();
+          this.props.verifyUserLogin(this.state);
         } }>Log In</button>
       </form>
     )
