@@ -1,4 +1,5 @@
 var promise = require('bluebird');
+require('locus')
 
 var options = {
   promiseLib: promise

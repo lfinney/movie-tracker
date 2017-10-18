@@ -1,22 +1,24 @@
 import {
-  checkForUser,
-  addNewUser
+  addNewUser,
+  itemsHasErrored,
+  loginUser
+
 } from '../actions';
 
 const checkForUserHelper = (userDataObject) => {
   return dispatch => {
-    // this fucking works!
-    fetch('/api/users').then(res => res.json()).then(res => console.log(res))
-  //   fetch('/api/users', {
-  //     method: 'POST',
-  //     body: userDataObject,
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(wut => wut.json())
-  //     .then(wut => console.log(wut))
-  //     .catch(err => console.log('ya fucked up', err))
+    fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify(userDataObject),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => console.log(res))
+      // .then(res => !res.ok ? dispatch(itemsHasErrored(true)) :
+      //   dispatch(loginUser(userDataObject)))
+      // .then(res => res.json())
+      // .catch(err => alert('Well, I was not prepared for this. ', err))
   };
 };
   //take in the user object and check it agains the backend

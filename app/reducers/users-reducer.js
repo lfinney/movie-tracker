@@ -1,14 +1,14 @@
-export function activeUser (state = [], action) {
+export const activeUser = (state = [], action) => {
   switch (action.type) {
-    case 'VALIDATE_USER_STATUS':
+    case 'LOGIN_USER':
       return action.user;
 
     default:
       return state;
     }
-}
+};
 
-export function postUser (state = [], action) {
+export const postUser = (state = [], action) => {
   switch (action.type) {
     case 'POST_NEW_USER':
       return action.user;
@@ -16,4 +16,4 @@ export function postUser (state = [], action) {
     default:
       return state;
     }
-}
+};

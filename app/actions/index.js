@@ -1,34 +1,34 @@
-export function itemsHasErrored(bool) {
+export const itemsHasErrored = (bool) => {
   return {
     type: 'ITEMS_HAS_ERRORED',
     hasErrored: bool
   };
-}
+};
 
-export function itemsIsLoading(bool) {
+export const itemsIsLoading = (bool) => {
   return {
     type: 'ITEMS_IS_LOADING',
     isLoading: bool
   };
-}
+};
 
-export function itemsFetchDataSuccess(items) {
+export const itemsFetchDataSuccess = (items) => {
   return {
     type: 'ITEMS_FETCH_DATA_SUCCESS',
     items
   };
-}
+};
 
-export function checkForUser(user) {
-  return {
-    type: 'VALIDATE_USER_STATUS',
-    user
-  };
-}
-
-export function addNewUser(user) {
+export const addNewUser = (user) => {
   return {
     type: 'POST_NEW_USER',
     user
   };
-}
+};
+
+export const loginUser = (user) => {
+  return {
+    type: 'LOGIN_USER',
+    user
+  };
+};
