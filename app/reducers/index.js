@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import getCurrentReducer from './get-current-reducer';
+import { items, itemsHasErrored, itemsIsLoading } from './get-current-reducer';
 
 const rootReducer = combineReducers({
-  getCurrentReducer
+  items,
+  itemsHasErrored,
+  itemsIsLoading
 });
 
 export default rootReducer;

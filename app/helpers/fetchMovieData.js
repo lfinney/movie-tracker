@@ -1,10 +1,24 @@
 import apiKeys from '../apiKeys';
+import { itemsHasErrored, itemsIsLoading, itemsFetchDataSuccess } from '../actions';
 
-const fetchCurrentMovies = () => {
-  return fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeys.lukeApi}&language=en-US&page=1`)
-    .then(fetchedData => fetchedData.json())
-    .then(parsedData => console.log(parsedData));
+const fetchCurrentMovies = (url) => {
+      return (dispatch) => {
+          dispatch(itemsIsLoading(true));
 
+          fetch(url)
+              .then((response) => {
+                  if (!response.ok) {
+                      throw Error(response.statusText);
+                  }
+
+                  dispatch(itemsIsLoading(false));
+
+                  return response;
+              })
+              .then((response) => response.json())
+              .then((items) => dispatch(itemsFetchDataSuccess(items)))
+              .catch(() => dispatch(itemsHasErrored(true)));
+      };
 };
 
 module.exports = { fetchCurrentMovies };
