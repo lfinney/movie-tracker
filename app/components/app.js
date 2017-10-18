@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-import { fetchCurrentMovies } from '../helpers/fetchMovieData'
+import { Route } from 'react-router';
+import Nav from './Nav';
+import CardListContainer from '../containers/CardListContainer';
 
 
 export default class App extends Component {
@@ -8,17 +9,22 @@ export default class App extends Component {
     super();
   }
 
-  componentDidMount() {
-    fetchCurrentMovies();
-  }
-
   render() {
     return (
       <div>
-        <CardList />
+        <Nav />
+        <CardListContainer />
         <h1>Movie Watcher</h1>
         <h1>Movie Watcher</h1>
+        <Route
+          exact path='/favorites'
+          render={()=><div>favs yo</div>}
+        />
+        <Route
+          exact path='/login'
+          render={()=><div>login ya punk!</div>}
+        />
       </div>
-    )
+    );
   }
 }
