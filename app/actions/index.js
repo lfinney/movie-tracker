@@ -19,12 +19,12 @@ export const itemsFetchDataSuccess = (items) => {
   };
 };
 
-export const addNewUser = (user) => {
-  return {
-    type: 'POST_NEW_USER',
-    user
-  };
-};
+// export const addNewUser = (user) => {
+//   return {
+//     type: 'POST_NEW_USER',
+//     user
+//   };
+// };
 
 export const loginUser = (user) => {
   return {

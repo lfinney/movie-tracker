@@ -19,6 +19,19 @@ const checkForUserHelper = (userDataObject) => {
       .catch(err => alert('Well, I was not prepared for this. ', err))
   };
 };
+
+const addNewUserHelper = (userDataObject) => {
+  return dispatch => {
+    fetch('/api/users/new', {
+      method: 'POST',
+      body: JSON.stringify(userDataObject),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => dispatch(checkForUserHelper(Object.assign({}, {email: userDataObject.email, password:userDataObject.password}))));
+  };
+};
   //take in the user object and check it agains the backend
   // use fetch to send to backend
   // if user exists in backend; verify passwords match
@@ -43,4 +56,4 @@ const checkForUserHelper = (userDataObject) => {
   // };
 
 
-module.exports = { checkForUserHelper };
+module.exports = { checkForUserHelper, addNewUserHelper };
