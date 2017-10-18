@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import { items, itemsHasErrored, itemsIsLoading } from './get-current-reducer';
+import { items, itemsHasErrored, itemsIsLoading } from './movies-reducer';
+import { checkForUser, addNewUser } from './users-reducer';
 
 const rootReducer = combineReducers({
   items,

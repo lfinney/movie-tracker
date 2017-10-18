@@ -18,3 +18,17 @@ export function itemsFetchDataSuccess(items) {
     items
   };
 }
+
+export function checkForUser(user) {
+  return {
+    type: 'VALIDATE_USER_STATUS',
+    user
+  };
+}
+
+export function addNewUser(user) {
+  return {
+    type: 'POST_NEW_USER',
+    user
+  };
+}
