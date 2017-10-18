@@ -14,11 +14,9 @@ const checkForUserHelper = (userDataObject) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(res => console.log(res))
-      // .then(res => !res.ok ? dispatch(itemsHasErrored(true)) :
-      //   dispatch(loginUser(userDataObject)))
-      // .then(res => res.json())
-      // .catch(err => alert('Well, I was not prepared for this. ', err))
+      .then(res => !res.ok ? dispatch(itemsHasErrored(true)) :
+      dispatch(loginUser(userDataObject)))
+      .catch(err => alert('Well, I was not prepared for this. ', err))
   };
 };
   //take in the user object and check it agains the backend
