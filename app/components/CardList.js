@@ -9,7 +9,6 @@ export default class CardList extends Component {
 
   componentDidMount() {
     this.props.fetchData(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeys.lukeApi}&language=en-US&page=1`);
-    console.log(this.props.items);
   }
 
   render() {
