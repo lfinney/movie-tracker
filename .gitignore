@@ -4,3 +4,6 @@ node_modules/
 
 ## API Keys
 apiKeys.js
+
+## CSS files will be rendered in production
+src/**/*.css
