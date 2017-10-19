@@ -1,6 +1,9 @@
 import * as actions from '../../actions';
 
 describe('actions', () => {
+
+  //need tests for error message and loading?
+  //
   it('should create an action to fetch movie data', () => {
     const moviesObject = {
       results: [
