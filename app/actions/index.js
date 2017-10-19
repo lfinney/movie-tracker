@@ -39,3 +39,10 @@ export const loginHasErrored = (bool) => {
     loginError: bool
   };
 };
+
+export const resetLogin = (bool) => {
+  return {
+    type: 'LOGIN_RESET',
+    loginError: bool
+  };
+};

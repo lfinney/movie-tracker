@@ -13,6 +13,9 @@ export const userLoginError = (state = false, action) => {
     case 'LOGIN_ERROR':
       return action.loginError;
 
+    case 'LOGIN_RESET':
+      return action.loginError;
+
     default:
       return state;
     }

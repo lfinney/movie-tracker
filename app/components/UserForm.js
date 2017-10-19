@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Prompt from './Prompt';
+import PropTypes from 'prop-types';
+import PromptContainer from '../containers/PromptContainer';
 
 export default class UserForm extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       name: '',
       email: '',
@@ -13,7 +14,7 @@ export default class UserForm extends Component {
   }
 
   handleInputs(key, event) {
-    this.setState({[key]: event.target.value})
+    this.setState({[key]: event.target.value});
   }
 
   inputRender(type) {
@@ -24,7 +25,7 @@ export default class UserForm extends Component {
         value={this.state.type}
         onChange={ (event) => this.handleInputs(type, event) }
       />
-    )
+    );
   }
 
   render() {
@@ -34,18 +35,20 @@ export default class UserForm extends Component {
           <div>
             {
               this.props.userLoginError &&
-              <Prompt />
+              <PromptContainer  />
             }
             {this.inputRender('email')}
             {this.inputRender('password')}
             <button type="submit" onClick={ (event) => {
               event.preventDefault();
-              this.props.verifyUserLogin(Object.assign({}, {email: this.state.email, password:this.state.password}));
+              this.props.verifyUserLogin(Object.assign({}, {
+                email: this.state.email,
+                password:this.state.password}));
             } }>Log In</button>
             <h2 onClick={ () => {
               this.setState({
                 signUp: true
-              })
+              });
             } }>Sign Up</h2>
           </div>
           :
@@ -55,11 +58,21 @@ export default class UserForm extends Component {
             {this.inputRender('password')}
             <button type="submit" onClick={ (event) => {
               event.preventDefault();
-              this.props.postUserSignUp(Object.assign({}, {name: this.state.name, email: this.state.email, password:this.state.password}));
+              this.props.postUserSignUp(
+                Object.assign({}, {
+                  name: this.state.name,
+                  email: this.state.email,
+                  password:this.state.password}));
             } }>Sign-Up</button>
           </div>
         }
       </form>
-    )
+    );
   }
 }
+
+UserForm.propTypes = {
+  userLoginError: PropTypes.func,
+  verifyUserLogin: PropTypes.object,
+  postUserSignUp: PropTypes.object
+};
