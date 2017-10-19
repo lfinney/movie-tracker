@@ -19,13 +19,6 @@ export const itemsFetchDataSuccess = (items) => {
   };
 };
 
-// export const addNewUser = (user) => {
-//   return {
-//     type: 'POST_NEW_USER',
-//     user
-//   };
-// };
-
 export const loginUser = (user) => {
   return {
     type: 'LOGIN_USER',
@@ -37,5 +30,19 @@ export const loginHasErrored = (bool) => {
   return {
     type: 'LOGIN_ERROR',
     loginError: bool
+  };
+};
+
+export const resetLogin = (bool) => {
+  return {
+    type: 'LOGIN_RESET',
+    loginError: bool
+  };
+};
+
+export const signUserOut = (user) => {
+  return {
+    type: 'SIGN_OUT_USER',
+    user
   };
 };

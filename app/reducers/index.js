@@ -6,7 +6,6 @@ const rootReducer = combineReducers({
   items,
   itemsHasErrored,
   itemsIsLoading,
-  // addNewUser,
   activeUser,
   userLoginError
 });

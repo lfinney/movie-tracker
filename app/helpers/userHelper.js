@@ -29,7 +29,7 @@ const addNewUserHelper = (userDataObject) => {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => dispatch(checkForUserHelper(Object.assign({}, {email: userDataObject.email, password:userDataObject.password}))));
+    .then(res => !res.ok ? dispatch(loginHasErrored(true)) : dispatch(checkForUserHelper(Object.assign({}, {email: userDataObject.email, password:userDataObject.password}))));
   };
 };
   //take in the user object and check it agains the backend

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = (props) => {
-  console.log(props);
+const Nav = ({ isLoggedIn, signOut }) => {
   return (
     <div>
       <Link to='/'>
@@ -15,7 +14,7 @@ const Nav = (props) => {
         Favorites
       </Link>
       {
-        !Object.keys(props.isLoggedIn).length
+        !Object.keys(isLoggedIn).length
         ?
         <div>
           you are not logged in ya punk
@@ -25,6 +24,7 @@ const Nav = (props) => {
           You are logged in hehe
         </div>
       }
+      <button onClick={signOut}>Sign Out</button>
     </div>
   );
 };

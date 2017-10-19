@@ -15,9 +15,8 @@ export default class App extends Component {
       <div>
         <NavContainer />
         <UserFormContainer />
+        <h1>Movie Watcher</h1>
         <CardListContainer />
-        <h1>Movie Watcher</h1>
-        <h1>Movie Watcher</h1>
         <Route
           exact path='/favorites'
           render={()=><div>favs yo</div>}
