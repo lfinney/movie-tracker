@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Card = () => {
+const Card = ({ title }) => {
   return (
     <div>
-    MOVIES
+    {title}
     </div>
   );
 };
