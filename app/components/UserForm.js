@@ -18,7 +18,13 @@ export default class UserForm extends Component {
   render() {
     return (
       <form>
+        {
+          !this.props.userLoginError &&
+          <div>false!</div>
+        }
         {!this.state.signUp ?
+          // if !signup & loginError
+          // display error message
           <div>
             <input
               type="text"
