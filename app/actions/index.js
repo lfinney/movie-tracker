@@ -32,3 +32,10 @@ export const loginUser = (user) => {
     user
   };
 };
+
+export const loginHasErrored = (bool) => {
+  return {
+    type: 'LOGIN_ERROR',
+    loginError: bool
+  };
+};

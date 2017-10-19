@@ -8,6 +8,16 @@ export const activeUser = (state = [], action) => {
     }
 };
 
+export const userLoginError = (state = false, action) => {
+  switch (action.type) {
+    case 'LOGIN_ERROR':
+      return action.loginError;
+
+    default:
+      return state;
+    }
+};
+
 // export const postUser = (state = [], action) => {
 //   switch (action.type) {
 //     case 'POST_NEW_USER':
