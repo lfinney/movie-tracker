@@ -32,7 +32,6 @@ export default class UserForm extends Component {
       <form>
         {!this.state.signUp ?
           <div>
-            <Prompt />
             {
               this.props.userLoginError &&
               <Prompt />
