@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
-import Nav from './Nav';
 import CardListContainer from '../containers/CardListContainer';
+import NavContainer from '../containers/NavContainer';
 import UserFormContainer from '../containers/UserFormContainer';
 
 
@@ -13,7 +13,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <NavContainer />
         <UserFormContainer />
         <CardListContainer />
         <h1>Movie Watcher</h1>

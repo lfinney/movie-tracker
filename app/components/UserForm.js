@@ -15,6 +15,17 @@ export default class UserForm extends Component {
     this.setState({[key]: event.target.value})
   }
 
+  inputRender(type) {
+    return (
+      <input
+        type="text"
+        placeholder={type}
+        value={this.state.type}
+        onChange={ (event) => this.handleInputs(type, event) }
+      />
+    )
+  }
+
   render() {
     return (
       <form>
@@ -26,18 +37,8 @@ export default class UserForm extends Component {
           // if !signup & loginError
           // display error message
           <div>
-            <input
-              type="text"
-              placeholder="email"
-              value={this.state.email}
-              onChange={ (event) => this.handleInputs('email', event) }
-            />
-            <input
-              type="text"
-              placeholder="password"
-              value={this.state.password}
-              onChange={ (event) => this.handleInputs('password', event) }
-            />
+            {this.inputRender('email')}
+            {this.inputRender('password')}
             <button type="submit" onClick={ (event) => {
               event.preventDefault();
               this.props.verifyUserLogin(Object.assign({}, {email: this.state.email, password:this.state.password}));
@@ -52,24 +53,9 @@ export default class UserForm extends Component {
           </div>
           :
           <div>
-            <input
-              type="text"
-              placeholder="name"
-              value={this.state.name}
-              onChange={ (event) => this.handleInputs('name', event) }
-            />
-            <input
-              type="text"
-              placeholder="email"
-              value={this.state.email}
-              onChange={ (event) => this.handleInputs('email', event) }
-            />
-            <input
-              type="text"
-              placeholder="password"
-              value={this.state.password}
-              onChange={ (event) => this.handleInputs('password', event) }
-            />
+            {this.inputRender('name')}
+            {this.inputRender('email')}
+            {this.inputRender('password')}
             <button type="submit" onClick={ (event) => {
               event.preventDefault();
               this.props.postUserSignUp(Object.assign({}, {name: this.state.name, email: this.state.email, password:this.state.password}));
