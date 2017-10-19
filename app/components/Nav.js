@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = (props) => {
+  console.log(props);
   return (
     <div>
       <Link to='/'>
@@ -13,6 +14,17 @@ const Nav = () => {
       <Link to='/favorites'>
         Favorites
       </Link>
+      {
+        !Object.keys(props.isLoggedIn).length
+        ?
+        <div>
+          you are not logged in ya punk
+        </div>
+        :
+        <div>
+          You are logged in hehe
+        </div>
+      }
     </div>
   );
 };

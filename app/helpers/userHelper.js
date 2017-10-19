@@ -1,6 +1,6 @@
 import {
   addNewUser,
-  itemsHasErrored,
+  loginHasErrored,
   loginUser
 
 } from '../actions';
@@ -14,7 +14,7 @@ const checkForUserHelper = (userDataObject) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(res => !res.ok ? dispatch(itemsHasErrored(true)) :
+      .then(res => !res.ok ? dispatch(loginHasErrored(true)) :
       dispatch(loginUser(userDataObject)))
       .catch(err => alert('Well, I was not prepared for this. ', err))
   };

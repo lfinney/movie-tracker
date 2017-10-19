@@ -5,7 +5,8 @@ import { checkForUserHelper, addNewUserHelper } from '../helpers/userHelper';
 
 
 const mapStateToProps = (store) => ({
-  isLoggedIn: store
+  isLoggedIn: store,
+  userLoginError: store.userLoginError
 });
 
 const mapDispatchToProps = (dispatch) => ({
