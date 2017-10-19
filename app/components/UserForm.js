@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Prompt from './Prompt';
 
 export default class UserForm extends Component {
   constructor() {
@@ -30,9 +31,12 @@ export default class UserForm extends Component {
     return (
       <form>
         {!this.state.signUp ?
-          // if !signup & loginError
-          // display error message
           <div>
+            <Prompt />
+            {
+              this.props.userLoginError &&
+              <Prompt />
+            }
             {this.inputRender('email')}
             {this.inputRender('password')}
             <button type="submit" onClick={ (event) => {
