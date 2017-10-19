@@ -35,7 +35,7 @@ export default class UserForm extends Component {
           <div>
             {
               this.props.userLoginError &&
-              <PromptContainer  />
+              <PromptContainer  className="login-error"/>
             }
             {this.inputRender('email')}
             {this.inputRender('password')}
@@ -53,6 +53,10 @@ export default class UserForm extends Component {
           </div>
           :
           <div>
+            {
+              this.props.userLoginError &&
+              <PromptContainer  className="sign-in-error"/>
+            }
             {this.inputRender('name')}
             {this.inputRender('email')}
             {this.inputRender('password')}
