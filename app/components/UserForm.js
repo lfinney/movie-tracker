@@ -29,10 +29,6 @@ export default class UserForm extends Component {
   render() {
     return (
       <form>
-        {
-          !this.props.userLoginError &&
-          <div>false!</div>
-        }
         {!this.state.signUp ?
           // if !signup & loginError
           // display error message
@@ -43,13 +39,11 @@ export default class UserForm extends Component {
               event.preventDefault();
               this.props.verifyUserLogin(Object.assign({}, {email: this.state.email, password:this.state.password}));
             } }>Log In</button>
-
-            <button type="submit" onClick={ (event) => {
-              event.preventDefault();
+            <h2 onClick={ () => {
               this.setState({
                 signUp: true
               })
-            } }>Sign Up</button>
+            } }>Sign Up</h2>
           </div>
           :
           <div>
