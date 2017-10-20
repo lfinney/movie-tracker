@@ -28,7 +28,7 @@ export default class CardList extends Component {
         {
           Object.keys(this.props.items).length &&
           <div>{this.props.items.results.map((result)=>{
-            return(<div>{result.title}</div>)
+            return(<Card movieData={result}/>)
           })}</div>
         }
       {/* {Object.keys(this.props.items).length ?
