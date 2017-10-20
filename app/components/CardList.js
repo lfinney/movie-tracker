@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import apiKeys from '../apiKeys';
 import Card from './Card';
-import { Carousel } from 'react-materialize';
 
 export default class CardList extends Component {
   constructor() {
@@ -28,7 +27,7 @@ export default class CardList extends Component {
         {
           Object.keys(this.props.items).length &&
           <div>{this.props.items.results.map((result)=>{
-            return(<div>{result.title}</div>)
+            return(<Card movieData={result}/>)
           })}</div>
         }
       {/* {Object.keys(this.props.items).length ?
