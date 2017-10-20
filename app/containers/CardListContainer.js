@@ -1,7 +1,7 @@
 import React from 'react';
 import CardList from '../components/CardList';
 import { connect } from 'react-redux';
-import { fetchCurrentMovies } from '../helpers/fetchMovieData';
+import { postToFavorites } from '../helpers/movieHelper';
 
 const mapStateToProps = (store) => ({
   items: store.items,
@@ -10,9 +10,9 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-  // return {
-  //   fetchData: (url) => dispatch(fetchCurrentMovies(url))
-  // };
+  return {
+    addToFavorites: (movieCard) => dispatch(postToFavorites(movieCard))
+  };
 };
 
 export default connect(mapStateToProps, null)(CardList);

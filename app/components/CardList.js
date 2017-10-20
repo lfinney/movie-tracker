@@ -28,21 +28,18 @@ export default class CardList extends Component {
   render() {
     return (
       <div>
-      	<Slider {...sliderOptions}>
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-	</Slider>
+        <Slider {...sliderOptions}>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </Slider>
         {
           Object.keys(this.props.items).length &&
           <div className="card-list-div">
-	  
-	  {this.props.items.results.map((result)=>{
-            return(<Card movieData={result}/>)
-          })}</div>
+            {this.props.items.results.map((result)=>{
+              return(<Card movieData={result}/>)
+            })}</div>
         }
-      {/* {Object.keys(this.props.items).length ?
-        <div>{this.mapOverData()}</div> : <div>nothing in here!</div> } */}
         <div>
 
         </div>

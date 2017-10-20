@@ -2,7 +2,7 @@
 import React from 'react';
 import App from '../components/App';
 import { connect } from 'react-redux';
-import { fetchCurrentMovies } from '../helpers/fetchMovieData';
+import { fetchCurrentMovies } from '../helpers/movieHelper';
 
 const mapStateToProps = (store) => ({
   items: store.items,

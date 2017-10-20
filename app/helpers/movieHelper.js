@@ -4,7 +4,7 @@ import {
   itemsFetchDataSuccess
 } from '../actions';
 
-const fetchCurrentMovies = (url) => {
+export const fetchCurrentMovies = (url) => {
   return (dispatch) => {
     dispatch(itemsIsLoading(true));
 
@@ -24,4 +24,11 @@ const fetchCurrentMovies = (url) => {
   };
 };
 
-module.exports = { fetchCurrentMovies };
+export const postToFavorites = (movieCard) => {
+  return (dispatch) => {
+    fetch('/user/favorites/new', {
+      METHOD: 'POST',
+      body: Object.assign({}, movieCard)
+    });
+  };
+};
