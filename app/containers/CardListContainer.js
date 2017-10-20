@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, null)(CardList);
+export default connect(mapStateToProps, mapDispatchToProps)(CardList);
