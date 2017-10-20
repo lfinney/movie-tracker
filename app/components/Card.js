@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const dateFormat = require('dateformat');
+// const now = new Date();
+
+
 const Card = ({ movieData }) => {
 
   const poster = `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`;
@@ -12,7 +16,7 @@ const Card = ({ movieData }) => {
       <p><img src={poster} /></p>
       <p>{movieData.vote_average}</p>
       <p>{movieData.overview}</p>
-      <p>{movieData.release_date}</p>
+      <p>{dateFormat(movieData.release_date, "longDate")}</p>
     </div>
   );
 };

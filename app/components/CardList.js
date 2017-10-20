@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import apiKeys from '../apiKeys';
 import Card from './Card';
-import { Carousel } from 'react-materialize';
 
 export default class CardList extends Component {
   constructor() {
