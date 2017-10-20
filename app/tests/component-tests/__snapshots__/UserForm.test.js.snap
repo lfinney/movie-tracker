@@ -22,13 +22,13 @@ ShallowWrapper {
           onChange={[Function]}
           placeholder="email"
           type="text"
-          value=""
+          value={undefined}
         />
         <input
           onChange={[Function]}
           placeholder="password"
           type="text"
-          value=""
+          value={undefined}
         />
         <button
           onClick={[Function]}
@@ -36,12 +36,11 @@ ShallowWrapper {
         >
           Log In
         </button>
-        <button
+        <h2
           onClick={[Function]}
-          type="submit"
         >
           Sign Up
-        </button>
+        </h2>
       </div>,
     },
     "ref": null,
@@ -51,17 +50,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          undefined,
           <input
             onChange={[Function]}
             placeholder="email"
             type="text"
-            value=""
+            value={undefined}
           />,
           <input
             onChange={[Function]}
             placeholder="password"
             type="text"
-            value=""
+            value={undefined}
           />,
           <button
             onClick={[Function]}
@@ -69,16 +69,16 @@ ShallowWrapper {
           >
             Log In
           </button>,
-          <button
+          <h2
             onClick={[Function]}
-            type="submit"
           >
             Sign Up
-          </button>,
+          </h2>,
         ],
       },
       "ref": null,
       "rendered": Array [
+        undefined,
         Object {
           "instance": null,
           "key": null,
@@ -87,7 +87,7 @@ ShallowWrapper {
             "onChange": [Function],
             "placeholder": "email",
             "type": "text",
-            "value": "",
+            "value": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -101,7 +101,7 @@ ShallowWrapper {
             "onChange": [Function],
             "placeholder": "password",
             "type": "text",
-            "value": "",
+            "value": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -127,11 +127,10 @@ ShallowWrapper {
           "props": Object {
             "children": "Sign Up",
             "onClick": [Function],
-            "type": "submit",
           },
           "ref": null,
           "rendered": "Sign Up",
-          "type": "button",
+          "type": "h2",
         },
       ],
       "type": "div",
@@ -149,13 +148,13 @@ ShallowWrapper {
             onChange={[Function]}
             placeholder="email"
             type="text"
-            value=""
+            value={undefined}
           />
           <input
             onChange={[Function]}
             placeholder="password"
             type="text"
-            value=""
+            value={undefined}
           />
           <button
             onClick={[Function]}
@@ -163,12 +162,11 @@ ShallowWrapper {
           >
             Log In
           </button>
-          <button
+          <h2
             onClick={[Function]}
-            type="submit"
           >
             Sign Up
-          </button>
+          </h2>
         </div>,
       },
       "ref": null,
@@ -178,17 +176,18 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            undefined,
             <input
               onChange={[Function]}
               placeholder="email"
               type="text"
-              value=""
+              value={undefined}
             />,
             <input
               onChange={[Function]}
               placeholder="password"
               type="text"
-              value=""
+              value={undefined}
             />,
             <button
               onClick={[Function]}
@@ -196,16 +195,16 @@ ShallowWrapper {
             >
               Log In
             </button>,
-            <button
+            <h2
               onClick={[Function]}
-              type="submit"
             >
               Sign Up
-            </button>,
+            </h2>,
           ],
         },
         "ref": null,
         "rendered": Array [
+          undefined,
           Object {
             "instance": null,
             "key": null,
@@ -214,7 +213,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "email",
               "type": "text",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -228,7 +227,7 @@ ShallowWrapper {
               "onChange": [Function],
               "placeholder": "password",
               "type": "text",
-              "value": "",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -254,11 +253,10 @@ ShallowWrapper {
             "props": Object {
               "children": "Sign Up",
               "onClick": [Function],
-              "type": "submit",
             },
             "ref": null,
             "rendered": "Sign Up",
-            "type": "button",
+            "type": "h2",
           },
         ],
         "type": "div",

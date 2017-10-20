@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardList should render component 1`] = `
+exports[`Card should render component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CardList
-    fetchData={[Function]}
-  />,
+  Symbol(enzyme.__unrendered__): <Card />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +16,9 @@ ShallowWrapper {
     "instance": null,
     "key": null,
     "nodeType": "host",
-    "props": Object {},
+    "props": Object {
+      "children": undefined,
+    },
     "ref": null,
     "rendered": null,
     "type": "div",
@@ -28,7 +28,9 @@ ShallowWrapper {
       "instance": null,
       "key": null,
       "nodeType": "host",
-      "props": Object {},
+      "props": Object {
+        "children": undefined,
+      },
       "ref": null,
       "rendered": null,
       "type": "div",

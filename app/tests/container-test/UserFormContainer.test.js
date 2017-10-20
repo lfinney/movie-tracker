@@ -11,18 +11,26 @@ configure({ adapter: new Adapter() })
 
 describe('UserFormContainer tests', () => {
 
-  // it('container should have default state', () => {
-  //   const mockStore = configureStore()
-  //   const intialState = { isLoggedIn: false }
-  //   const store = mockStore(intialState)
-  //   const wrapper = mount(<UserFormContainer
-  //                             verifyUserLogin={store}
-  //                             postUserSignUp={intialState}
-  //                         />)
+  it('container should have default state', () => {
+    const mockStore = configureStore();
+    const mockFunc = jest.fn();
+    const verifiedUser = {
+      email: 'gizmo_da_corgi@doggos.com',
+      password: 'stumper4lyfe' };
+    const newUser = {
+      name: 'Gizmo',
+      email: 'gizmo_da_corgi@doggos.com',
+      password: 'stumper4lyfe' };
+    const store = mockStore(verifiedUser);
+    const wrapper = mount(<UserFormContainer
+                              store={store}
+                              verifyUserLogin={verifiedUser}
+                              postUserSignUp={newUser}
+                          />)
 
 
-    // expect(wrapper.instance().props.todos).toEqual({ isLoggedIn: false });
-  // });
+    expect(wrapper.instance().props.verifyUserLogin).toEqual(verifiedUser);
+  });
 
   // it('the rendered component should fire correct action', () => {
   //   const mockStore = configureStore()

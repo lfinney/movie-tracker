@@ -5,7 +5,13 @@ import Nav from '../../components/Nav';
 describe('Nav', () => {
 
   it('should render component', () => {
-    const wrapper = shallow(<Nav />);
+    const mockUser = {
+      email: 'gizmo_da_corgi@doggos.com',
+      password: 'stumper4lyfe'
+    };
+
+    const wrapper = shallow(
+      <Nav isLoggedIn={[mockUser]}/>);
 
     expect(wrapper).toMatchSnapshot();
   });
