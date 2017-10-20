@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompt should render component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Prompt />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Whoops!
+        </h2>,
+        <h3>
+          Your username and password combination do not match our records.
+        </h3>,
+        <h3>
+          Please try again.
+        </h3>,
+        <button
+          className="error-button"
+          onClick={[Function]}
+        >
+          Try Again
+        </button>,
+      ],
+      "className": "error-prompt",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Whoops!",
+        },
+        "ref": null,
+        "rendered": "Whoops!",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Your username and password combination do not match our records.",
+        },
+        "ref": null,
+        "rendered": "Your username and password combination do not match our records.",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Please try again.",
+        },
+        "ref": null,
+        "rendered": "Please try again.",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Try Again",
+          "className": "error-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Try Again",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Whoops!
+          </h2>,
+          <h3>
+            Your username and password combination do not match our records.
+          </h3>,
+          <h3>
+            Please try again.
+          </h3>,
+          <button
+            className="error-button"
+            onClick={[Function]}
+          >
+            Try Again
+          </button>,
+        ],
+        "className": "error-prompt",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Whoops!",
+          },
+          "ref": null,
+          "rendered": "Whoops!",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Your username and password combination do not match our records.",
+          },
+          "ref": null,
+          "rendered": "Your username and password combination do not match our records.",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Please try again.",
+          },
+          "ref": null,
+          "rendered": "Please try again.",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Try Again",
+            "className": "error-button",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Try Again",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
