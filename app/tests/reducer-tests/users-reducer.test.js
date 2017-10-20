@@ -1,7 +1,7 @@
 import * as userReducer from '../../reducers/users-reducer';
 import * as actions from '../../actions';
 
-describe('todos reducer tests', () => {
+describe('users reducer', () => {
   it('should return our initial state', () => {
     const expectation = {};
 
