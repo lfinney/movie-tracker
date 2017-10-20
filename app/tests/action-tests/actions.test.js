@@ -2,8 +2,28 @@ import * as actions from '../../actions';
 
 describe('actions', () => {
 
-  //need tests for error message and loading?
-  //
+  it('should return a boolen for when there is an error', () => {
+    const errorMock = true;
+    const expected = {
+      type: 'ITEMS_HAS_ERRORED',
+      hasErrored: true
+    };
+    const expectation = actions.itemsHasErrored(errorMock);
+
+    expect(expectation).toEqual(expected);
+  });
+
+  it('should return a boolen for when loading', () => {
+    const loadMock = true;
+    const expected = {
+      type: 'ITEMS_IS_LOADING',
+      isLoading: true
+    };
+    const expectation = actions.itemsIsLoading(loadMock);
+
+    expect(expectation).toEqual(expected);
+  });
+
   it('should create an action to fetch movie data', () => {
     const moviesObject = {
       results: [
@@ -36,6 +56,39 @@ describe('actions', () => {
       user: { email: 'gizmo@corgis.io', password: 'stumper4lyfe' }
     };
     const expectation = actions.loginUser(userObject);
+
+    expect(expectation).toEqual(expected);
+  });
+
+  it('should return a boolen when a login error occurs', () => {
+    const errorMock = true;
+    const expected = {
+      type: 'LOGIN_ERROR',
+      loginError: true
+    };
+    const expectation = actions.loginHasErrored(errorMock);
+
+    expect(expectation).toEqual(expected);
+  });
+
+  it('should return a boolen when the login resets', () => {
+    const resetMock = false;
+    const expected = {
+      type: 'LOGIN_RESET',
+      loginError: false
+    };
+    const expectation = actions.resetLogin(resetMock);
+
+    expect(expectation).toEqual(expected);
+  });
+
+  it('should sign a user out', () => {
+    const userMock = {};
+    const expected = {
+      type: 'SIGN_OUT_USER',
+      user: {}
+    };
+    const expectation = actions.signUserOut(userMock);
 
     expect(expectation).toEqual(expected);
   });
