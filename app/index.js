@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
+import AppContainer from './containers/AppContainer';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -25,7 +25,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
     <div>
-      <App />
+      <AppContainer />
       <DevTools />
     </div>
     </Router>
