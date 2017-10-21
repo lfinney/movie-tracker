@@ -1,1 +1,19 @@
-$primary-color: rgba(250,128,114,1);
+$primary-light: rgba(251, 249, 240, 1);
+$white: rgba(255, 255, 255, 1);
+$secondary-dark: rgba(163, 47, 66, 1);
+$body-font: 'Roboto', sans-serif;
+$headers-font:  'Oswald', sans-serif;
+$border-radius: 7px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -ms-border-radius: $radius;
+ }
+
+@mixin box-shadow {
+  -webkit-box-shadow: 10px 10px 73px 0px $secondary-dark;
+  -moz-box-shadow: 10px 10px 73px 0px $secondary-dark;
+  box-shadow: 10px 10px 73px 0px $secondary-dark;
+}

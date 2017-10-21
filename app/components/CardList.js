@@ -35,7 +35,7 @@ export default class CardList extends Component {
 	</Slider>
         {
           Object.keys(this.props.items).length &&
-          <div>
+          <div className="card-list-div">
 	  
 	  {this.props.items.results.map((result)=>{
             return(<Card movieData={result}/>)

@@ -1,8 +1,19 @@
 @import './variables.scss';
 @import './prompt.scss';
+@import './card.scss';
+@import './card-list.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  background-color: $primary-light;
+}
 
 #main h1 {
-  background-color: yellow;
+  font-family: $headers-font;
 }
 
 #main {

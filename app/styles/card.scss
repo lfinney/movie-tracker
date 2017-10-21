@@ -1,0 +1,14 @@
+.card-div {
+  @include border-radius(5px);
+  @include box-shadow;  
+  background-color: pink;
+  width: 20vw;
+  border: 10px solid $white;
+  margin-bottom: 23px;
+}
+
+.card-div img {
+  width: 100%;
+}
+
+
