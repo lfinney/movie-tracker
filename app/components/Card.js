@@ -15,7 +15,7 @@ const Card = ({ movieData }) => {
       <img src={poster} />    
          <div className="card-text">
 	 <p className="title">{movieData.title}</p>
-         <p>{dateFormat(movieData.release_date, "longDate")}</p>
+         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>
          <p>Avg. User Rating: {movieData.vote_average}</p>
 	 <p>{movieData.overview}</p>
      	 </div>
