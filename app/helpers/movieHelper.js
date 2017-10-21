@@ -27,9 +27,9 @@ export const fetchCurrentMovies = (url) => {
 export const postToFavorites = (movieCard) => {
   console.log(movieCard);
   return (dispatch) => {
-    fetch('/user/favorites/new', {
+    fetch('/users/favorites/new', {
       METHOD: 'POST',
-      body: Object.assign({}, movieCard)
+      body: Object.assign({}, {movieCard})
     });
   };
 };

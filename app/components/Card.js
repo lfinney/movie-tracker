@@ -18,6 +18,7 @@ const Card = ({ movieData, addToFavorites }) => {
         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>
         <p>Avg. User Rating: {movieData.vote_average}</p>
         <p>{movieData.overview}</p>
+        <button onClick={() => addToFavorites(movieData)}>Favorite</button>
       </div>
     </div>
   );

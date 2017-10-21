@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import apiKeys from '../apiKeys';
 import Card from './Card';
+<<<<<<< HEAD
 import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
 
 
+=======
+import dataCleaner from '../helpers/dataCleaner';
+>>>>>>> add data cleaner for movie cards
 
 export default class CardList extends Component {
   constructor() {
@@ -37,8 +41,10 @@ export default class CardList extends Component {
           Object.keys(this.props.items).length &&
           <div className="card-list-div">
             {this.props.items.results.map((result)=>{
-              return(<Card movieData={result}/>)
-            })}</div>
+            return(<Card
+              movieData={dataCleaner(result)}
+              addToFavorites={this.props.addToFavorites}/>)
+          })}</div>
         }
         <div>
 
