@@ -3,28 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({ isLoggedIn, signOut }) => {
   return (
-    <div>
-      <Link to='/'>
+    <div id="nav-div">
+      <Link to='/' className="left">
         Home
       </Link>
-      <Link to='/login'>
-        Login
-      </Link>
-      <Link to='/favorites'>
+      <Link to='/favorites' className="left">
         Favorites
       </Link>
-      {
-        !Object.keys(isLoggedIn).length
-        ?
-        <div>
-          you are not logged in ya punk
-        </div>
-        :
-        <div>
-          You are logged in hehe
-        </div>
-      }
-      <button onClick={signOut}>Sign Out</button>
+      <Link to='/login' className="right">
+        Login
+      </Link>
+
+      <button onClick={signOut} className="right">Sign Out</button>
     </div>
   );
 };

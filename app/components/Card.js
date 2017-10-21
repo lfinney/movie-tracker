@@ -12,11 +12,13 @@ const Card = ({ movieData }) => {
 
   return (
     <div className="card-div">
-      <p>{movieData.title}</p>
-      <img src={poster} />
-      <p>{movieData.vote_average}</p>
-      <p>{movieData.overview}</p>
-      <p>{dateFormat(movieData.release_date, "longDate")}</p>
+      <img src={poster} />    
+         <div className="card-text">
+	 <p className="title">{movieData.title}</p>
+         <p>{dateFormat(movieData.release_date, "longDate")}</p>
+         <p>Avg. User Rating: {movieData.vote_average}</p>
+	 <p>{movieData.overview}</p>
+     	 </div>
     </div>
   );
 };

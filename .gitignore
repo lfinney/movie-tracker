@@ -7,3 +7,7 @@ apiKeys.js
 
 ## CSS files will be rendered in production
 app/**/*.css
+
+## Ignore swap files
+*.swo
+*.swp 
