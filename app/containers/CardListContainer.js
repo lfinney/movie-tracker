@@ -7,6 +7,7 @@ const mapStateToProps = (store) => ({
   items: store.items,
   hasErrored: store.itemsHasErrored,
   isLoading: store.itemsIsLoading
+  // userId: store.
 });
 
 const mapDispatchToProps = (dispatch) => {
