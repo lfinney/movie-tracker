@@ -1,5 +1,7 @@
+@import './variables.scss';
+
 .card-div {
-  @include border-radius(5px);
+  @include super-radius(5px);
   @include box-shadow;  
   background-color: black;
   width: 20vw;

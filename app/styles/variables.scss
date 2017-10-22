@@ -10,11 +10,12 @@ $headers-font:  'Oswald', sans-serif;
 $border-radius: 7px;
 
 
-@mixin border-radius($radius) {
+@mixin super-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   -ms-border-radius: $radius;
+  border-radius: $radius;
  }
 
 @mixin box-shadow {
