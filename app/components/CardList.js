@@ -39,7 +39,8 @@ export default class CardList extends Component {
             return (<Card
               movieData={dataCleaner(result)}
               addToFavorites={this.props.addToFavorites}
-              userId={this.props.userId}/>)
+              userId={this.props.userId}
+              userFavArray={this.props.userFavArray}/>)
           })}
         </div>
         }

@@ -25,18 +25,23 @@ export const fetchCurrentMovies = (url) => {
   };
 };
 
-export const postToFavorites = (movieCard, userId) => {
-  return (dispatch) => {
-    fetch('api/users/favorites/new/', {
-      method: 'POST',
-      body: JSON.stringify(Object.assign({}, movieCard, {user_id: userId})),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+export const postToFavorites = (movieCard, userId, userArray) => {
+  console.log(userArray[0].movie_id, movieCard.movie_id);
+  if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
+    console.log('halp');
+  } else {
+    return (dispatch) => {
+      fetch('api/users/favorites/new/', {
+        method: 'POST',
+        body: JSON.stringify(Object.assign({}, movieCard, {user_id: userId})),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
       .then(res => res.json())
       .then(resJson => console.log(resJson));
-  };
+    };
+  }
 };
 
 export const fetchFavorites = (userId) => {
