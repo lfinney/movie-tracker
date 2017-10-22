@@ -46,3 +46,10 @@ export const signUserOut = (user) => {
     user
   };
 };
+
+export const populateFavArray = (favs) => {
+  return {
+    type: 'POPULATE_USER_FAVORITES',
+    favs
+  };
+};

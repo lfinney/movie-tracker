@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Prompt = ({ removePopup }) => {
   return (
@@ -17,6 +18,10 @@ const Prompt = ({ removePopup }) => {
 
     </div>
   );
+};
+
+Prompt.propTypes = {
+  removePopup: PropTypes.func
 };
 
 export default Prompt;

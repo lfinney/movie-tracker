@@ -24,12 +24,12 @@ export const userLoginError = (state = false, action) => {
   }
 };
 
-// export const postUser = (state = [], action) => {
-//   switch (action.type) {
-//     case 'POST_NEW_USER':
-//       return action.user;
-//
-//     default:
-//       return state;
-//     }
-// };
+export const userFavArray = (state = [], action) => {
+  switch (action.type) {
+  case 'POPULATE_USER_FAVORITES':
+    return action.favs;
+
+  default:
+    return state;
+  }
+};

@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import AppContainer from './containers/AppContainer';
+import Routes from './components/Routes';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import rootReducer from './reducers';
-import configureStore from './configureStore';
-import DevTools from './components/redux-devtools';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 require('./styles/main.scss');
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__();
 
 
 const store = createStore(
@@ -19,16 +17,12 @@ const store = createStore(
   devTools,
   applyMiddleware(thunk)
 );
-const history = createHistory();
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
-    <div>
-      <AppContainer />
-      <DevTools />
-    </div>
-    </Router>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   </Provider>,
-    document.getElementById('main')
-  );
+  document.getElementById('main')
+);
