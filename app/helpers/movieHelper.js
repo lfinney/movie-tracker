@@ -1,7 +1,8 @@
 import {
   itemsHasErrored,
   itemsIsLoading,
-  itemsFetchDataSuccess
+  itemsFetchDataSuccess,
+  populateFavArray
 } from '../actions';
 
 export const fetchCurrentMovies = (url) => {
@@ -33,15 +34,15 @@ export const postToFavorites = (movieCard, userId) => {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => res.json())
-    .then(resJson => console.log(resJson))
+      .then(res => res.json())
+      .then(resJson => console.log(resJson));
   };
 };
 
 export const fetchFavorites = (userId) => {
   return (dispatch) => {
     fetch(`api/users/${userId}/favorites/`)
-    .then(res => res.json())
-    .then(favs => console.log(favs))
-  }
-}
+      .then(res => res.json())
+      .then(favs => dispatch(populateFavArray(favs.data)));
+  };
+};

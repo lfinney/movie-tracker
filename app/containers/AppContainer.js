@@ -13,7 +13,7 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchData: (url) => dispatch(fetchCurrentMovies(url)),
-    getFavorites: (userId) => dispatch(fetchFavorites(userId))
+    fetchFavorites: (userId) => dispatch(fetchFavorites(userId))
   };
 };
 

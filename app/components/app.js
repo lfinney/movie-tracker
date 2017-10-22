@@ -13,6 +13,15 @@ export default class App extends Component {
 
   componentDidMount() {
     this.props.fetchData(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeys.lukeApi}&language=en-US&page=1`);
+
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      this.props.fetchFavorites(this.props.userId);
+    } else {
+      console.log('aint got no shit');
+    }
   }
 
   render() {
