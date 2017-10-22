@@ -18,19 +18,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1 getFavorites={this.props.getFavorites(this.props.userId)}>MovieTastic!</h1>
-	<NavContainer />
- 	<Route exact path='/'
-	  render={()=><CardListContainer />}
-	/>
-        <Route
-          exact path='/favorites'
-          render={()=><div>favs yo</div>}
-        />
-        <Route
-          exact path='/login'
-          component={UserFormContainer}
-        />
+        <h1>Im the App!</h1>
+        <NavContainer />
       </div>
     );
   }
