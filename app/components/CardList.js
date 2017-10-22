@@ -25,6 +25,7 @@ export default class CardList extends Component {
   // }
 
   render() {
+
     return (
       <div>
         <Slider {...sliderOptions}>
@@ -35,12 +36,14 @@ export default class CardList extends Component {
         {
           Object.keys(this.props.items).length &&
           <div className="card-list-div">
-            {this.props.items.results.map((result) => {
+            {this.props.items.results.map((result, index) => {
             return (<Card
               movieData={dataCleaner(result)}
               addToFavorites={this.props.addToFavorites}
               userId={this.props.userId}
-              userFavArray={this.props.userFavArray}/>)
+              userFavArray={this.props.userFavArray}
+	      key={index}
+	      />)    
           })}
         </div>
         }
@@ -53,5 +56,5 @@ CardList.propTypes = {
   fetchData: PropTypes.func,
   addToFavorites: PropTypes.func,
   userId: PropTypes.number,
-  items: PropTypes.arrayOf(PropTypes.object)
+  items: PropTypes.object
 };
