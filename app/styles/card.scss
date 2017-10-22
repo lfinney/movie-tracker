@@ -18,6 +18,10 @@
   transform: scale(1);
 }
 
+.favorite {
+  border-color: red;
+}
+
 .card-div:hover {
   z-index: 2;
   -webkit-transition: all 200ms ease-in;
