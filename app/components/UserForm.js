@@ -29,6 +29,7 @@ export default class UserForm extends Component {
   }
 
   render() {
+	 
     return (
       <form>
         {!this.state.signUp ?
@@ -76,7 +77,7 @@ export default class UserForm extends Component {
 }
 
 UserForm.propTypes = {
-  userLoginError: PropTypes.func,
-  verifyUserLogin: PropTypes.object,
-  postUserSignUp: PropTypes.object
+  userLoginError: PropTypes.bool,
+  verifyUserLogin: PropTypes.func,
+  postUserSignUp: PropTypes.func
 };

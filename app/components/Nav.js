@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Nav = ({ isLoggedIn, signOut }) => {
+const Nav = ({ isLoggedIn, signOut, clearFavs }) => {
   return (
     <div id="nav-div">
       <Link to='/' className="left">
@@ -15,7 +15,7 @@ const Nav = ({ isLoggedIn, signOut }) => {
         Login
       </Link>
 
-      <button onClick={signOut} className="right">Sign Out</button>
+      <button onClick={()=>{signOut();clearFavs()}} className="right">Sign Out</button>
     </div>
   );
 };
