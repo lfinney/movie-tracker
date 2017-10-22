@@ -21,7 +21,7 @@ const Nav = ({ isLoggedIn, signOut }) => {
 };
 
 Nav.propTypes = {
-  isLoggedIn: PropTypes.bool,
+  isLoggedIn: PropTypes.object,
   signOut: PropTypes.func
 };
 

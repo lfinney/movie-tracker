@@ -60,7 +60,7 @@
   top: 0;
 }
 
-.title {
+.card-div .title {
   @include title-bg; 
   font-family: $headers-font;
   font-size: 2em;
