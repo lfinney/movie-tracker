@@ -17,10 +17,11 @@ console.log(this.props)
 
          { this.props.favoriteItems.length &&
           <div className="card-list-div">
-            {this.props.favoriteItems.map((item) => {
+            {this.props.favoriteItems.map((item, index) => {
               return (<Card
                 movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}
                 userFavArray={this.props.userFavArray} 
+		key={index}
                 />)  
             })}
           </div>
