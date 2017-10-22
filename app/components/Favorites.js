@@ -3,27 +3,28 @@ import PropTypes from 'prop-types';
 import Card from './Card';
 import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
-
+import dataCleaner from '../helpers/dataCleaner';
 export default class Favorites extends Component {
   constructor() {
     super();
   }
 
   render() {
+console.log(this.props)
     return (
       <div>
-        {this.props.favoriteItems}
 
-        {/* { Object.keys(this.props.items).length &&
+
+         { this.props.favoriteItems.length &&
           <div className="card-list-div">
-            {this.props.items.results.map((result) => {
+            {this.props.favoriteItems.map((item) => {
               return (<Card
-                movieData={dataCleaner(result)}
-                addToFavorites={this.props.addToFavorites}
-                userId={this.props.userId}/>)
+                movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}
+                userFavArray={this.props.userFavArray} 
+                />)  
             })}
           </div>
-        } */}
+        } 
       </div>
     );
   }
