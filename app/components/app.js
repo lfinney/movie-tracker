@@ -18,9 +18,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>MovieTastic!</h1>
+        <h1 getFavorites={this.props.getFavorites(this.props.userId)}>MovieTastic!</h1>
 	<NavContainer />
- 	<Route exact path='/' 
+ 	<Route exact path='/'
 	  render={()=><CardListContainer />}
 	/>
         <Route

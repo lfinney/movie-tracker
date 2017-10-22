@@ -49,5 +49,8 @@ export default class CardList extends Component {
 }
 
 CardList.propTypes = {
-  fetchData: PropTypes.func
+  fetchData: PropTypes.func,
+  addToFavorites: PropTypes.func,
+  userId: PropTypes.number,
+  items: PropTypes.arrayOf(PropTypes.object)
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Nav = ({ isLoggedIn, signOut }) => {
   return (
@@ -17,6 +18,11 @@ const Nav = ({ isLoggedIn, signOut }) => {
       <button onClick={signOut} className="right">Sign Out</button>
     </div>
   );
+};
+
+Nav.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  signOut: PropTypes.func
 };
 
 export default Nav;

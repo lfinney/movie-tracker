@@ -6,7 +6,6 @@ const dateFormat = require('dateformat');
 
 
 const Card = ({ movieData, addToFavorites, userId }) => {
-  console.log(movieData);
   const poster = `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`;
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
 
@@ -25,7 +24,9 @@ const Card = ({ movieData, addToFavorites, userId }) => {
 };
 
 Card.propTypes = {
-  movie: PropTypes.object
+  movieData: PropTypes.object,
+  addToFavorites: PropTypes.func,
+  userId: PropTypes.number
 };
 
 export default Card;

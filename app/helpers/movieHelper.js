@@ -25,16 +25,23 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId) => {
-  console.log(movieCard);
   return (dispatch) => {
-    fetch('api/users/favorites/new', {
+    fetch('api/users/favorites/new/', {
       method: 'POST',
       body: JSON.stringify(Object.assign({}, movieCard, {user_id: userId})),
       headers: {
         'Content-Type': 'application/json'
       }
     })
-      .then(res => res.json())
-      .then(resJson => console.log(resJson));
+    .then(res => res.json())
+    .then(resJson => console.log(resJson))
   };
 };
+
+export const fetchFavorites = (userId) => {
+  return (dispatch) => {
+    fetch(`api/users/${userId}/favorites/`)
+    .then(res => res.json())
+    .then(favs => console.log(favs))
+  }
+}
