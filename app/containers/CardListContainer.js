@@ -6,13 +6,13 @@ import { postToFavorites } from '../helpers/movieHelper';
 const mapStateToProps = (store) => ({
   items: store.items,
   hasErrored: store.itemsHasErrored,
-  isLoading: store.itemsIsLoading
-  // userId: store.
+  isLoading: store.itemsIsLoading,
+  userId: store.activeUser.id
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addToFavorites: (movieCard) => dispatch(postToFavorites(movieCard))
+    addToFavorites: (movieCard, userId) => dispatch(postToFavorites(movieCard, userId))
   };
 };
 

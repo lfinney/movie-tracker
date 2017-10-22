@@ -24,12 +24,12 @@ export const fetchCurrentMovies = (url) => {
   };
 };
 
-export const postToFavorites = (movieCard) => {
+export const postToFavorites = (movieCard, userId) => {
   console.log(movieCard);
   return (dispatch) => {
     fetch('api/users/favorites/new', {
       method: 'POST',
-      body: JSON.stringify(Object.assign({}, movieCard, {user_id:2})),
+      body: JSON.stringify(Object.assign({}, movieCard, {user_id: userId})),
       headers: {
         'Content-Type': 'application/json'
       }

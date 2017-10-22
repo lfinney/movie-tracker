@@ -5,7 +5,7 @@ const dateFormat = require('dateformat');
 // const now = new Date();
 
 
-const Card = ({ movieData, addToFavorites }) => {
+const Card = ({ movieData, addToFavorites, userId }) => {
 
   const poster = `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`;
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
@@ -18,7 +18,7 @@ const Card = ({ movieData, addToFavorites }) => {
         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>
         <p>Avg. User Rating: {movieData.vote_average}</p>
         <p>{movieData.overview}</p>
-        <button onClick={() => addToFavorites(movieData)}>Favorite</button>
+        <button onClick={() => addToFavorites(movieData, userId)}>Favorite</button>
       </div>
     </div>
   );
