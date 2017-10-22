@@ -6,13 +6,13 @@ const dateFormat = require('dateformat');
 
 
 const Card = ({ movieData, addToFavorites, userId }) => {
-
+  console.log(movieData);
   const poster = `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`;
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
 
   return (
     <div className="card-div">
-      <img src={poster} />
+      <img src={movieData.poster_path} />
       <div className="card-text">
         <p className="title">{movieData.title}</p>
         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>
