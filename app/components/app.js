@@ -17,7 +17,7 @@ export default class App extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps !== this.props) {
+    if (prevProps !== this.props && this.props.userId) {
       this.props.fetchFavorites(this.props.userId);
     } else {
       console.log('aint got no shit');

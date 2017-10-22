@@ -26,7 +26,7 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId, userArray) => {
-  if (!userId) { console.log('no user id') } 
+  if (!userId) { return null} 
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
     alert('You have already faved that dude');
   } else {
