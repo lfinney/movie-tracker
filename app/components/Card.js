@@ -11,12 +11,14 @@ const Card = ({ movieData }) => {
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
 
   return (
-    <div>
-      <p>{movieData.title}</p>
-      <p><img src={poster} /></p>
-      <p>{movieData.vote_average}</p>
-      <p>{movieData.overview}</p>
-      <p>{dateFormat(movieData.release_date, "longDate")}</p>
+    <div className="card-div">
+      <img src={poster} />    
+         <div className="card-text">
+	 <p className="title">{movieData.title}</p>
+         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>
+         <p>Avg. User Rating: {movieData.vote_average}</p>
+	 <p>{movieData.overview}</p>
+     	 </div>
     </div>
   );
 };

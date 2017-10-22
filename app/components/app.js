@@ -18,17 +18,18 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <NavContainer />
-        <UserFormContainer />
-        <h1>Movie Watcher</h1>
-        <CardListContainer />
+        <h1>MovieTastic!</h1>
+	<NavContainer />
+ 	<Route exact path='/' 
+	  render={()=><CardListContainer />}
+	/>
         <Route
           exact path='/favorites'
           render={()=><div>favs yo</div>}
         />
         <Route
           exact path='/login'
-          render={()=><div>login ya punk!</div>}
+          component={UserFormContainer}
         />
       </div>
     );

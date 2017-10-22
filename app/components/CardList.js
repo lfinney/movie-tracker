@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import apiKeys from '../apiKeys';
 import Card from './Card';
+import Slider from 'react-slick';
+import sliderOptions from './sliderOptions';
+
+
 
 export default class CardList extends Component {
   constructor() {
@@ -24,9 +28,16 @@ export default class CardList extends Component {
   render() {
     return (
       <div>
+      	<Slider {...sliderOptions}>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</Slider>
         {
           Object.keys(this.props.items).length &&
-          <div>{this.props.items.results.map((result)=>{
+          <div className="card-list-div">
+	  
+	  {this.props.items.results.map((result)=>{
             return(<Card movieData={result}/>)
           })}</div>
         }

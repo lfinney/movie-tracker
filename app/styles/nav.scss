@@ -1,0 +1,18 @@
+#nav-div {
+  background-color: $secondary-v-dark;
+  text-align: left;
+  position: relative;
+  font-family: $body-font;
+
+}
+
+#nav-div a {
+  color: $primary-neutral;
+  text-decoration: none;
+}
+
+#nav-div .right {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}

@@ -1,8 +1,23 @@
 @import './variables.scss';
 @import './prompt.scss';
+@import './card.scss';
+@import './card-list.scss';
+@import './nav.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  background-color: $primary-light;
+}
 
 #main h1 {
-  background-color: $primary-color;
+  font-family: $headers-font;
+  font-size: 3em;
+  background-color: $secondary-dark;
+  color: $primary-neutral; 
 }
 
 #main {
