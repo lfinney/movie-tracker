@@ -1,7 +1,7 @@
 import configureStore from 'redux-mock-store';
 import { shallow, mount, configure } from 'enzyme'
 import { mapStateToProps, mapDispatchToProps } from '../../containers/UserFormContainer'
-import UserFormContainer from '../../containers/UserFormContainer'
+import UserFormContainer from '../../containers/UserFormContainer';
 import UserForm from '../../components/UserForm'
 import React from 'react'
 import Adapter from 'enzyme-adapter-react-16';
@@ -21,7 +21,7 @@ describe('UserFormContainer tests', () => {
       name: 'Gizmo',
       email: 'gizmo_da_corgi@doggos.com',
       password: 'stumper4lyfe' };
-    const store = mockStore(verifiedUser);
+    const store = mockStore( );
     const wrapper = mount(<UserFormContainer
                               store={store}
                               verifyUserLogin={verifiedUser}

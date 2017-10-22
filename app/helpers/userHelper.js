@@ -14,8 +14,9 @@ const checkForUserHelper = (userDataObject) => {
         'Content-Type': 'application/json'
       }
     })
-      .then(res => !res.ok ? dispatch(loginHasErrored(true)) :
-      dispatch(loginUser(userDataObject)))
+      .then(res => res.json())
+      .then(res => res.status !== 'success' ? dispatch(loginHasErrored(true)) :
+      dispatch(loginUser(res.data)))
       .catch(err => alert('Well, I was not prepared for this. ', err))
   };
 };
@@ -32,28 +33,10 @@ const addNewUserHelper = (userDataObject) => {
     .then(res => !res.ok ? dispatch(loginHasErrored(true)) : dispatch(checkForUserHelper(Object.assign({}, {email: userDataObject.email, password:userDataObject.password}))));
   };
 };
-  //take in the user object and check it agains the backend
-  // use fetch to send to backend
-  // if user exists in backend; verify passwords match
-  // if passwords match let store know user is now logged in
-
-  // return (dispatch) => {
-  //   dispatch(itemsIsLoading(true));
-  //
-  //   fetch(url)
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw Error(response.statusText);
-  //       }
-  //
-  //       dispatch(itemsIsLoading(false));
-  //
-  //       return response;
-  //     })
-  //     .then((response) => response.json())
-  //     .then((items) => dispatch(itemsFetchDataSuccess(items)))
-  //     .catch(() => dispatch(itemsHasErrored(true)));
-  // };
+//
+// const getUserData = () => {
+//
+// }
 
 
 module.exports = { checkForUserHelper, addNewUserHelper };
