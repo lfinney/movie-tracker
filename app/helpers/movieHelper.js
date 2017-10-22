@@ -26,7 +26,7 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId, userArray) => {
-  console.log(userArray[0].movie_id, movieCard.movie_id);
+  
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
     console.log('halp');
   } else {
@@ -39,8 +39,9 @@ export const postToFavorites = (movieCard, userId, userArray) => {
         }
       })
       .then(res => res.json())
-      .then(resJson => console.log(resJson));
-    };
+      .then(dispatch(fetchFavorites(userId)))
+ 
+    }
   }
 };
 
