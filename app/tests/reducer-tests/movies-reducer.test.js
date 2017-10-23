@@ -13,7 +13,8 @@ describe('movies reducer', () => {
       hasErrored: true };
     const expectation = action.hasErrored;
 
-    expect(movieReducer.itemsHasErrored(undefined, action)).toEqual(expectation);
+    expect(movieReducer.itemsHasErrored(undefined,
+      action)).toEqual(expectation);
   });
 
   it('should return true if an item is loading', () => {

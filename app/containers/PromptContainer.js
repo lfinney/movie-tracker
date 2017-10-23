@@ -1,8 +1,6 @@
-import React from 'react';
 import Prompt from '../components/Prompt';
 import { connect } from 'react-redux';
 import { resetLogin, hideDupPopup} from '../actions';
-
 
 const mapStateToProps = (store) => ({
   userLoginError: store.userLoginError,

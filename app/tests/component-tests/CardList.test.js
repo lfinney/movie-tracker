@@ -6,10 +6,9 @@ describe('CardList', () => {
 
   it('should render component', () => {
     const mockFunc = jest.fn();
-    const wrapper = shallow(<CardList 
-		       addToFavorites={mockFunc}
-		       
-		    />);
+    const wrapper = shallow(<CardList
+      addToFavorites={mockFunc}
+    />);
 
     expect(wrapper).toMatchSnapshot();
   });

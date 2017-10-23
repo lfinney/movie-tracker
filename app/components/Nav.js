@@ -15,17 +15,22 @@ const Nav = ({ isLoggedIn, signOut, clearFavs }) => {
         Login
       </Link>
 
-      <button onClick={()=>{signOut();clearFavs()}} className="right-button">Sign Out</button>
+      <button onClick={()=>{
+        signOut();
+        clearFavs();
+      }}
+      className="right-button">Sign Out</button>
     </div>
   );
 };
 
 Nav.propTypes = {
   isLoggedIn: PropTypes.oneOfType([
-			      PropTypes.object,
-			      PropTypes.array
+    PropTypes.object,
+    PropTypes.array
   ]),
-  signOut: PropTypes.func
+  signOut: PropTypes.func,
+  clearFavs: PropTypes.func
 };
 
 export default Nav;

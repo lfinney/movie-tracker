@@ -28,7 +28,6 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId, userArray) => {
-	console.log('post 2 favs', movieCard, userId, userArray)
   if (!userId) {
     return (dispatch) => dispatch(redirectToLogin(true));
   }
@@ -43,23 +42,22 @@ export const postToFavorites = (movieCard, userId, userArray) => {
           'Content-Type': 'application/json'
         }
       })
-      .then(res => res.json())
-      .then(dispatch(fetchFavorites(userId)))
-    }
+        .then(res => res.json())
+        .then(dispatch(fetchFavorites(userId)));
+    };
   }
 };
 
 export const fetchRemoveFavorite = (userId, favId) => {
-	console.log('fetch rm', userId, favId)
-   return (dispatch) => {
-   fetch(`api/users/${userId}/favorites/${favId}`,{
-     method:'delete',
-     headers: {'Content-Type': 'application/json'}
-   } )
-    .then(response => response.json())
-    .then(dispatch(fetchFavorites(userId)))
-    .catch(err => console.log(err))
-  }
+  return (dispatch) => {
+    fetch(`api/users/${userId}/favorites/${favId}`, {
+      method:'delete',
+      headers: {'Content-Type': 'application/json'}
+    } )
+      .then(response => response.json())
+      .then(dispatch(fetchFavorites(userId)))
+      .catch(error => alert(error));
+  };
 };
 
 export const fetchFavorites = (userId) => {
