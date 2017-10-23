@@ -14,6 +14,10 @@ export default class UserForm extends Component {
     };
   }
 
+  componentDidMount() {
+   this.props.turnOffLoginFlag(false);
+  }
+
   handleInputs(key, event) {
     this.setState({[key]: event.target.value});
   }
