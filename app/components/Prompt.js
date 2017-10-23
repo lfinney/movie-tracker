@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Prompt = ({ removePopup, userLoginError, dupFav }) => {
+const Prompt = ({ removePopup, userLoginError, dupFav, removeDupPopup }) => {
   return (
     <div className="error-prompt">
       <h2>Whoops!</h2>
@@ -17,6 +17,7 @@ const Prompt = ({ removePopup, userLoginError, dupFav }) => {
         onClick={ (event) => {
           event.preventDefault();
           removePopup();
+          removeDupPopup();
         }}>
         Try Again
       </button>
@@ -27,6 +28,7 @@ const Prompt = ({ removePopup, userLoginError, dupFav }) => {
 
 Prompt.propTypes = {
   removePopup: PropTypes.func,
+  removeDupPopup: PropTypes.func,
   userLoginError: PropTypes.bool,
   dupFav: PropTypes.bool
 };

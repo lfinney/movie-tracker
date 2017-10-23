@@ -1,7 +1,7 @@
 import React from 'react';
 import Prompt from '../components/Prompt';
 import { connect } from 'react-redux';
-import { resetLogin } from '../actions';
+import { resetLogin, hideDupPopup} from '../actions';
 
 
 const mapStateToProps = (store) => ({
@@ -11,7 +11,8 @@ const mapStateToProps = (store) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    removePopup: () => dispatch(resetLogin(false))
+    removePopup: () => dispatch(resetLogin(false)),
+    removeDupPopup: () => dispatch(hideDupPopup(false))
   };
 };
 
