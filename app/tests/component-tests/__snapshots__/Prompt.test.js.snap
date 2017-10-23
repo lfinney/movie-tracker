@@ -21,9 +21,8 @@ ShallowWrapper {
         <h2>
           Whoops!
         </h2>,
-        <h3>
-          Your username and password combination do not match our records.
-        </h3>,
+        undefined,
+        undefined,
         <h3>
           Please try again.
         </h3>,
@@ -49,17 +48,8 @@ ShallowWrapper {
         "rendered": "Whoops!",
         "type": "h2",
       },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Your username and password combination do not match our records.",
-        },
-        "ref": null,
-        "rendered": "Your username and password combination do not match our records.",
-        "type": "h3",
-      },
+      undefined,
+      undefined,
       Object {
         "instance": null,
         "key": null,
@@ -97,9 +87,8 @@ ShallowWrapper {
           <h2>
             Whoops!
           </h2>,
-          <h3>
-            Your username and password combination do not match our records.
-          </h3>,
+          undefined,
+          undefined,
           <h3>
             Please try again.
           </h3>,
@@ -125,17 +114,8 @@ ShallowWrapper {
           "rendered": "Whoops!",
           "type": "h2",
         },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Your username and password combination do not match our records.",
-          },
-          "ref": null,
-          "rendered": "Your username and password combination do not match our records.",
-          "type": "h3",
-        },
+        undefined,
+        undefined,
         Object {
           "instance": null,
           "key": null,

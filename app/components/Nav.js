@@ -21,7 +21,10 @@ const Nav = ({ isLoggedIn, signOut, clearFavs }) => {
 };
 
 Nav.propTypes = {
-  isLoggedIn: PropTypes.object,
+  isLoggedIn: PropTypes.oneOfType([
+			      PropTypes.object,
+			      PropTypes.array
+  ]),
   signOut: PropTypes.func
 };
 
