@@ -4,13 +4,14 @@ import Card from './Card';
 import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
 import dataCleaner from '../helpers/dataCleaner';
+
 export default class Favorites extends Component {
   constructor() {
     super();
   }
 
   render() {
-console.log(this.props)
+
     return (
       <div>
 
@@ -21,6 +22,9 @@ console.log(this.props)
               return (<Card
                 movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}
                 userFavArray={this.props.userFavArray} 
+		removeFav={this.props.removeFavorite}
+		userId={this.props.userId}
+		type="favs"
 		key={index}
                 />)  
             })}

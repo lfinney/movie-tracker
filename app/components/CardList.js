@@ -5,6 +5,7 @@ import Card from './Card';
 import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
 import dataCleaner from '../helpers/dataCleaner';
+import { fetchRemoveFavorite } from '../helpers/movieHelper';
 
 export default class CardList extends Component {
   constructor() {
@@ -25,7 +26,7 @@ export default class CardList extends Component {
   // }
 
   render() {
-
+console.log(fetchRemoveFavorite(),'render of cardlist' )
     return (
       <div>
         <Slider {...sliderOptions}>
@@ -42,6 +43,8 @@ export default class CardList extends Component {
               addToFavorites={this.props.addToFavorites}
               userId={this.props.userId}
               userFavArray={this.props.userFavArray}
+	      removeFav={fetchRemoveFavorite}
+	      type="home"
 	      key={index}
 	      />)    
           })}
