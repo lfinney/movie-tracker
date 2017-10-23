@@ -17,7 +17,7 @@ export default class Favorites extends Component {
 
 
          { this.props.favoriteItems.length &&
-          <div className="card-list-div">
+          <div className="card-list-div favorites-div">
             {this.props.favoriteItems.map((item, index) => {
               return (<Card
                 movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}
