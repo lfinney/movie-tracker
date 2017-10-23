@@ -10,8 +10,9 @@ const Card = ({ movieData, addToFavorites, userId, userFavArray }) => {
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
 
   return (
-    <div className="card-div">
+    <div className={ userFavArray.find( movie => movie.movie_id === movieData.movie_id) ? "card-div favorite" : "card-div"}>
       <img src={movieData.poster_path} />
+      <img src="../styles/assets/fav-icon.svg" className="fav-icon"/>
       <div className="card-text">
         <p className="title">{movieData.title}</p>
         <p className="date">{dateFormat(movieData.release_date, "longDate")}</p>

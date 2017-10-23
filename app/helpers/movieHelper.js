@@ -26,9 +26,9 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId, userArray) => {
-  console.log(userArray[0].movie_id, movieCard.movie_id);
+  if (!userId) { return null} 
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
-    console.log('halp');
+    alert('You have already faved that dude');
   } else {
     return (dispatch) => {
       fetch('api/users/favorites/new/', {
@@ -39,12 +39,14 @@ export const postToFavorites = (movieCard, userId, userArray) => {
         }
       })
       .then(res => res.json())
-      .then(resJson => console.log(resJson));
-    };
+      .then(dispatch(fetchFavorites(userId)))
+ 
+    }
   }
 };
 
 export const fetchFavorites = (userId) => {
+   
   return (dispatch) => {
     fetch(`api/users/${userId}/favorites/`)
       .then(res => res.json())

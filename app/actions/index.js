@@ -53,3 +53,10 @@ export const populateFavArray = (favs) => {
     favs
   };
 };
+
+export const clearFavArray = (favs) => {
+  return {
+    type: 'CLEAR_USER_FAVORITES',
+    favs
+  };
+};

@@ -5,8 +5,9 @@ import { postToFavorites } from '../helpers/movieHelper';
 
 const mapStateToProps = (store) => ({
 //do we pass favorites in as a prop?
-  favoriteItems: "These are my favorite movies"
-});
+  favoriteItems: store.userFavArray,
+  userFavArray: store.userFavArray
+})
 
 const mapDispatchToProps = (dispatch) => {
   return {

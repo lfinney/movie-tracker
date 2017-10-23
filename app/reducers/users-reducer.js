@@ -29,6 +29,9 @@ export const userFavArray = (state = [], action) => {
   case 'POPULATE_USER_FAVORITES':
     return action.favs;
 
+  case 'CLEAR_USER_FAVORITES':
+    return action.favs;
+
   default:
     return state;
   }
