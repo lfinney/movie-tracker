@@ -5,6 +5,7 @@ import Card from './Card';
 import dataCleaner from '../helpers/dataCleaner';
 import { fetchRemoveFavorite } from '../helpers/movieHelper'
 import PromptContainer from '../containers/PromptContainer';
+import { Redirect } from 'react-router-dom';
 
 export default class CardList extends Component {
   constructor() {

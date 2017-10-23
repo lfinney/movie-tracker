@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 const dateFormat = require('dateformat');
-// const now = new Date();
 
 
 const Card = ({ movieData, addToFavorites, userId, userFavArray, removeFav, type }) => {
   const poster = `https://image.tmdb.org/t/p/w500/${movieData.poster_path}`;
   const backdrop = `https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`;
-	  
+
   return (
     <div className={ userFavArray.find( movie => movie.movie_id === movieData.movie_id) ? "card-div favorite" : "card-div"}>
       <img src={movieData.poster_path} />
