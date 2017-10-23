@@ -26,6 +26,7 @@ export const fetchCurrentMovies = (url) => {
 };
 
 export const postToFavorites = (movieCard, userId, userArray) => {
+	console.log('post 2 favs', movieCard, userId, userArray)
   if (!userId) { return null} 
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
     alert('You have already faved that dude');
@@ -42,6 +43,19 @@ export const postToFavorites = (movieCard, userId, userArray) => {
       .then(dispatch(fetchFavorites(userId)))
  
     }
+  }
+};
+
+export const fetchRemoveFavorite = (userId, favId) => {
+	console.log('fetch rm', userId, favId)
+   return (dispatch) => {	
+   fetch(`api/users/${userId}/favorites/${favId}`,{	
+     method:'delete',
+     headers: {'Content-Type': 'application/json'}
+   } )
+    .then(response => response.json())
+    .then(dispatch(fetchFavorites(userId)))
+    .catch(err => console.log(err))
   }
 };
 
