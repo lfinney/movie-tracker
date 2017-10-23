@@ -5,35 +5,35 @@ import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
 import dataCleaner from '../helpers/dataCleaner';
 
-const Favorites = () => {
+const Favorites = ({ favoriteItems, userFavArray, userId, removeFavorite }) => {
   return (
     <div>
       <div className="favorites-div">
         <Slider {...sliderOptions}>
-          {this.props.favoriteItems.map((item, index) => {
+          {favoriteItems.map((item, index) => {
             return (<Card
               movieData={Object.assign({},
                 dataCleaner(item),
                 { poster_path: item.poster_path })}
-              userFavArray={this.props.userFavArray}
-              removeFav={this.props.removeFavorite}
-              userId={this.props.userId}
+              userFavArray={userFavArray}
+              removeFav={removeFavorite}
+              userId={userId}
               type="favs"
               key={index}
             />);
           })}
         </Slider>
       </div>
-      { this.props.favoriteItems.length &&
+      { favoriteItems.length &&
         <div className="card-list-div">
-          {this.props.favoriteItems.map((item, index) => {
+          {favoriteItems.map((item, index) => {
             return (<Card
               movieData={Object.assign({},
                 dataCleaner(item),
                 { poster_path: item.poster_path })}
-              userFavArray={this.props.userFavArray}
-              removeFav={this.props.removeFavorite}
-              userId={this.props.userId}
+              userFavArray={userFavArray}
+              removeFav={removeFavorite}
+              userId={userId}
               type="favs"
               key={index}
             />);
