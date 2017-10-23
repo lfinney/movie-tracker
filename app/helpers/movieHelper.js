@@ -3,7 +3,8 @@ import {
   itemsIsLoading,
   itemsFetchDataSuccess,
   populateFavArray,
-  duplicateFav
+  duplicateFav,
+  redirectToLogin
 } from '../actions';
 
 export const fetchCurrentMovies = (url) => {
@@ -28,7 +29,9 @@ export const fetchCurrentMovies = (url) => {
 
 export const postToFavorites = (movieCard, userId, userArray) => {
 	console.log('post 2 favs', movieCard, userId, userArray)
-  if (!userId) { return null}
+  if (!userId) {
+    return (dispatch) => dispatch(redirectToLogin(true));
+  }
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
     return (dispatch) => dispatch(duplicateFav(true));
   } else {

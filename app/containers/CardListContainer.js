@@ -9,12 +9,14 @@ const mapStateToProps = (store) => ({
   isLoading: store.itemsIsLoading,
   userId: store.activeUser.id,
   userFavArray: store.userFavArray,
-  dupFav: store.dupFav
+  dupFav: store.dupFav,
+  loginRequired: store.loginRequired
 });
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addToFavorites: (movieCard, userId, userFavArray) => dispatch(postToFavorites(movieCard, userId, userFavArray))
+    addToFavorites: (movieCard, userId, userFavArray) =>
+      dispatch(postToFavorites(movieCard, userId, userFavArray))
   };
 };
 

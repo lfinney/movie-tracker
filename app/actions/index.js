@@ -40,6 +40,13 @@ export const duplicateFav = (bool) => {
   };
 };
 
+export const redirectToLogin = (bool) => {
+  return {
+    type: 'REDIRECT_TO_LOGIN',
+    loginRedirect: bool
+  };
+};
+
 export const resetLogin = (bool) => {
   return {
     type: 'LOGIN_RESET',

@@ -15,7 +15,7 @@ const Nav = ({ isLoggedIn, signOut, clearFavs }) => {
         Login
       </Link>
 
-      <button onClick={()=>{signOut();clearFavs()}} className="right">Sign Out</button>
+      <button onClick={()=>{signOut();clearFavs()}} className="right-button">Sign Out</button>
     </div>
   );
 };

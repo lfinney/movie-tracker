@@ -35,10 +35,5 @@ const addNewUserHelper = (userDataObject) => {
             password:userDataObject.password}))));
   };
 };
-//
-// const getUserData = () => {
-//
-// }
-
 
 module.exports = { checkForUserHelper, addNewUserHelper };
