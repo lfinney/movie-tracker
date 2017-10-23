@@ -14,10 +14,24 @@ export default class Favorites extends Component {
 
     return (
       <div>
+      <div className="favorites-div">
+         <Slider {...sliderOptions}>
+{this.props.favoriteItems.map((item, index) => {
+              return (<Card
+                movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}
+                userFavArray={this.props.userFavArray}
+		removeFav={this.props.removeFavorite}
+		userId={this.props.userId}
+		type="favs"
+		key={index}
+                />)
+            })}
+         </Slider>
+	 </div>
 
 
          { this.props.favoriteItems.length &&
-          <div className="card-list-div">
+          <div className="card-list-div favorites-div">
             {this.props.favoriteItems.map((item, index) => {
               return (<Card
                 movieData={Object.assign({}, dataCleaner(item), { poster_path: item.poster_path })}

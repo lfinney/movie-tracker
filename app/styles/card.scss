@@ -23,6 +23,16 @@
   border-color: #EDFF86;
 }
 
+.favorites-div .card-div {
+  transform: scale(1.05);
+  border-color: #EDFF86;
+  display: inline-block;
+}
+
+.favorites-div .card-div .fav-icon {
+  display: initial;
+}
+
 .card-div:hover {
   z-index: 2;
   -webkit-transition: all 200ms ease-in;
