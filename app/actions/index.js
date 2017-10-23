@@ -60,3 +60,10 @@ export const clearFavArray = (favs) => {
     favs
   };
 };
+
+export const duplicateFav = (bool) => {
+  return {
+    type: 'FAV_ALREADY_EXISTS',
+    currentFav: bool
+  };
+};

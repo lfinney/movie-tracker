@@ -36,3 +36,13 @@ export const userFavArray = (state = [], action) => {
     return state;
   }
 };
+
+export const dupFav = (state = false, action) => {
+  switch (action.type) {
+  case 'FAV_ALREADY_EXISTS':
+    return action.currentFav;
+
+  default:
+    return state;
+  }
+};

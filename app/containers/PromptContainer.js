@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 import { resetLogin } from '../actions';
 
 
-// const mapStateToProps = (store) => ({
-// });
+const mapStateToProps = (store) => ({
+  userLoginError: store.userLoginError,
+  dupFav: store.dupFav
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -13,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Prompt);
+export default connect(mapStateToProps, mapDispatchToProps)(Prompt);
