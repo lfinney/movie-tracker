@@ -49,3 +49,13 @@ export const dupFav = (state = false, action) => {
     return state;
   }
 };
+
+export const loginRequired = (state = false, action) => {
+  switch (action.type) {
+  case 'REDIRECT_TO_LOGIN':
+    return action.loginRedirect;
+
+  default:
+    return state;
+  }
+};

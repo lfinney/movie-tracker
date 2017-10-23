@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { items, itemsHasErrored, itemsIsLoading } from './movies-reducer';
-import { userLoginError, activeUser, userFavArray, dupFav, removeDupPopup } from './users-reducer';
+import { userLoginError, activeUser, userFavArray, dupFav, loginRequired } from './users-reducer';
 
 const rootReducer = combineReducers({
   items,
@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   userLoginError,
   userFavArray,
   dupFav,
-  removeDupPopup
+  loginRequired
 });
 
 export default rootReducer;

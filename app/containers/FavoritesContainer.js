@@ -4,16 +4,15 @@ import { connect } from 'react-redux';
 import { postToFavorites, fetchRemoveFavorite } from '../helpers/movieHelper';
 
 const mapStateToProps = (store) => ({
-//do we pass favorites in as a prop?
   favoriteItems: store.userFavArray,
   userFavArray: store.userFavArray,
   userId: store.activeUser.id
-})
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
-// or do we pass favorites in as a funtion?/
-	  removeFavorite: (userId, favoriteId) => dispatch(fetchRemoveFavorite(userId, favoriteId)) 
+    removeFavorite: (userId, favoriteId) =>
+      dispatch(fetchRemoveFavorite(userId, favoriteId))
   };
 };
 
