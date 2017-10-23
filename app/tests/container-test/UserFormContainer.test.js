@@ -1,6 +1,6 @@
 import configureStore from 'redux-mock-store';
 import { mount, configure } from 'enzyme';
-import UserFormContainer, { mapStateToProps, mapDispatchToProps } from '../../containers/UserFormContainer';
+import UserFormContainer from '../../containers/UserFormContainer';
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 

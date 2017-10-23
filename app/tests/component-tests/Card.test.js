@@ -8,7 +8,8 @@ describe('Card', () => {
     const mockMovData = {
       movie_id: 346364,
       overview: "In a small town in...",
-      poster_path: "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+      poster_path: `https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg`,
       release_date: "2017-09-05",
       title: "It",
       vote_average: 7.4
@@ -20,7 +21,8 @@ describe('Card', () => {
         id: 12,
         user_id: 2,
         overview: "In a small town in",
-        poster_path: "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+        poster_path: `https://image.tmdb.org/t/p/w500/
+                      /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg`,
         release_date: "2017-09-05",
         title: "It",
         vote_average: 7.4
@@ -35,7 +37,7 @@ describe('Card', () => {
       removeFav={jest.fn()}
       type='home'
       key='1'
-/>);
+    />);
 
     expect(wrapper).toMatchSnapshot();
   });
