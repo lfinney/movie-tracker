@@ -10,7 +10,8 @@ ShallowWrapper {
       Object {
         "movie_id": 346364,
         "overview": "In a small town in...",
-        "poster_path": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+        "poster_path": "https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
         "release_date": "2017-09-05",
         "title": "It",
         "vote_average": 7.4,
@@ -24,7 +25,8 @@ ShallowWrapper {
           "id": 12,
           "movie_id": 346364,
           "overview": "In a small town in",
-          "poster_path": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+          "poster_path": "https://image.tmdb.org/t/p/w500/
+                      /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
           "release_date": "2017-09-05",
           "title": "It",
           "user_id": 2,
@@ -49,7 +51,8 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="poster of It"
-          src="https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
+          src="https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
         />,
         <img
           alt="fav-icon"
@@ -93,7 +96,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "poster of It",
-          "src": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+          "src": "https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
         },
         "ref": null,
         "rendered": null,
@@ -226,7 +230,8 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="poster of It"
-            src="https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
+            src="https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
           />,
           <img
             alt="fav-icon"
@@ -270,7 +275,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "poster of It",
-            "src": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+            "src": "https://image.tmdb.org/t/p/w500/
+                    /9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
           },
           "ref": null,
           "rendered": null,

@@ -15,7 +15,7 @@ export default class UserForm extends Component {
   }
 
   componentDidMount() {
-   this.props.turnOffLoginFlag(false);
+    this.props.turnOffLoginFlag(false);
   }
 
   handleInputs(key, event) {
@@ -86,6 +86,7 @@ export default class UserForm extends Component {
 
 UserForm.propTypes = {
   userLoginError: PropTypes.bool,
+  turnOffLoginFlag: PropTypes.bool,
   verifyUserLogin: PropTypes.func,
   postUserSignUp: PropTypes.func,
   activeUser: PropTypes.object

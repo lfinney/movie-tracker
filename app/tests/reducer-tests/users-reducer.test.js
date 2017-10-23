@@ -1,5 +1,4 @@
 import * as userReducer from '../../reducers/users-reducer';
-import * as actions from '../../actions';
 
 describe('users reducer', () => {
   it('should return our initial state', () => {
