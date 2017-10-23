@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from '../../components/App';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('App', () => {
 
   it('should render component', () => {
-    const wrapper = shallow(<App />);
+    const mockFunc = jest.fn();
+    const wrapper = shallow(
+      <App fetchData={mockFunc} />);
 
     expect(wrapper.length).toEqual(1);
-  })
-})
+  });
+});

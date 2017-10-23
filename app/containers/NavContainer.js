@@ -1,8 +1,6 @@
-import React from 'react';
 import Nav from '../components/Nav';
 import { connect } from 'react-redux';
 import { signUserOut, clearFavArray } from '../actions';
-
 
 const mapStateToProps = (store) => ({
   isLoggedIn: store.activeUser

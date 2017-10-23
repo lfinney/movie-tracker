@@ -1,9 +1,7 @@
-import React from 'react';
 import UserForm from '../components/UserForm';
 import { connect } from 'react-redux';
 import { checkForUserHelper, addNewUserHelper } from '../helpers/userHelper';
 import { redirectToLogin } from '../actions'; 
-
 
 const mapStateToProps = (store) => ({
   activeUser: store.activeUser,

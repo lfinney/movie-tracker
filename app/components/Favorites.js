@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import Slider from 'react-slick';
@@ -47,6 +47,7 @@ const Favorites = ({ favoriteItems, userFavArray, userId, removeFavorite }) => {
 Favorites.propTypes = {
   fetchData: PropTypes.func,
   addToFavorites: PropTypes.func,
+  removeFavorite: PropTypes.func,
   userId: PropTypes.number,
   favoriteItems: PropTypes.array,
   userFavArray: PropTypes.array,

@@ -1,7 +1,6 @@
-import React from 'react';
 import favorites from '../components/favorites';
 import { connect } from 'react-redux';
-import { postToFavorites, fetchRemoveFavorite } from '../helpers/movieHelper';
+import { fetchRemoveFavorite } from '../helpers/movieHelper';
 
 const mapStateToProps = (store) => ({
   favoriteItems: store.userFavArray,
