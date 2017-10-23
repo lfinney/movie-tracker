@@ -11,6 +11,19 @@ export const activeUser = (state = {}, action) => {
   }
 };
 
+export const userFavArray = (state = [], action) => {
+  switch (action.type) {
+  case 'POPULATE_USER_FAVORITES':
+    return action.favs;
+
+  case 'CLEAR_USER_FAVORITES':
+    return action.favs;
+
+  default:
+    return state;
+  }
+};
+
 export const userLoginError = (state = false, action) => {
   switch (action.type) {
   case 'LOGIN_ERROR':
@@ -24,13 +37,13 @@ export const userLoginError = (state = false, action) => {
   }
 };
 
-export const userFavArray = (state = [], action) => {
+export const dupFav = (state = false, action) => {
   switch (action.type) {
-  case 'POPULATE_USER_FAVORITES':
-    return action.favs;
+  case 'FAV_ALREADY_EXISTS':
+    return action.dupFav;
 
-  case 'CLEAR_USER_FAVORITES':
-    return action.favs;
+  case 'HIDE_DUPELICATE_FAV_POPUP':
+    return action.dupFav;
 
   default:
     return state;

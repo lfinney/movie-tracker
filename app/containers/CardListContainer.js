@@ -8,7 +8,8 @@ const mapStateToProps = (store) => ({
   hasErrored: store.itemsHasErrored,
   isLoading: store.itemsIsLoading,
   userId: store.activeUser.id,
-  userFavArray: store.userFavArray
+  userFavArray: store.userFavArray,
+  dupFav: store.dupFav
 });
 
 const mapDispatchToProps = (dispatch) => {

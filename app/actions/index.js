@@ -33,10 +33,24 @@ export const loginHasErrored = (bool) => {
   };
 };
 
+export const duplicateFav = (bool) => {
+  return {
+    type: 'FAV_ALREADY_EXISTS',
+    dupFav: bool
+  };
+};
+
 export const resetLogin = (bool) => {
   return {
     type: 'LOGIN_RESET',
     loginError: bool
+  };
+};
+
+export const hideDupPopup = (bool) => {
+  return {
+    type: 'HIDE_DUPELICATE_FAV_POPUP',
+    dupFav: bool
   };
 };
 

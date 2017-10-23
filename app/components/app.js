@@ -27,7 +27,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Im the App!</h1>
+        <h1>MovieTastic</h1>
         <NavContainer />
       </div>
     );

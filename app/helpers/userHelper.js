@@ -1,13 +1,11 @@
 import {
-  addNewUser,
   loginHasErrored,
   loginUser
-
 } from '../actions';
 
 const checkForUserHelper = (userDataObject) => {
   return dispatch => {
-    fetch('/api/users', {
+    fetch('/api/users/', {
       method: 'POST',
       body: JSON.stringify(userDataObject),
       headers: {
@@ -15,9 +13,9 @@ const checkForUserHelper = (userDataObject) => {
       }
     })
       .then(res => res.json())
-      .then(res => res.status !== 'success' ? dispatch(loginHasErrored(true)) :
-      dispatch(loginUser(res.data)))
-      .catch(err => alert('Well, I was not prepared for this. ', err))
+      .then(res => res.status === 'success' ? dispatch(loginUser(res.data)) :
+        dispatch(loginHasErrored(true)))
+      .catch(error => alert('Well, I was not prepared for this. ', error));
   };
 };
 
@@ -30,7 +28,11 @@ const addNewUserHelper = (userDataObject) => {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => !res.ok ? dispatch(loginHasErrored(true)) : dispatch(checkForUserHelper(Object.assign({}, {email: userDataObject.email, password:userDataObject.password}))));
+      .then(res => !res.ok ?
+        dispatch(loginHasErrored(true)) :
+        dispatch(checkForUserHelper(Object.assign({},
+          {email: userDataObject.email,
+            password:userDataObject.password}))));
   };
 };
 //

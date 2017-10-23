@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PromptContainer from '../containers/PromptContainer';
+import { Redirect } from 'react-router-dom';
 
 export default class UserForm extends Component {
   constructor() {
@@ -29,11 +30,14 @@ export default class UserForm extends Component {
   }
 
   render() {
-	 
     return (
       <form>
         {!this.state.signUp ?
           <div>
+            {
+              this.props.activeUser.id &&
+                <Redirect to="/" />
+            }
             {
               this.props.userLoginError &&
               <PromptContainer  className="login-error"/>
@@ -79,5 +83,6 @@ export default class UserForm extends Component {
 UserForm.propTypes = {
   userLoginError: PropTypes.bool,
   verifyUserLogin: PropTypes.func,
-  postUserSignUp: PropTypes.func
+  postUserSignUp: PropTypes.func,
+  activeUser: PropTypes.object
 };

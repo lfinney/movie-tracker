@@ -2,7 +2,8 @@ import {
   itemsHasErrored,
   itemsIsLoading,
   itemsFetchDataSuccess,
-  populateFavArray
+  populateFavArray,
+  duplicateFav
 } from '../actions';
 
 export const fetchCurrentMovies = (url) => {
@@ -27,9 +28,9 @@ export const fetchCurrentMovies = (url) => {
 
 export const postToFavorites = (movieCard, userId, userArray) => {
 	console.log('post 2 favs', movieCard, userId, userArray)
-  if (!userId) { return null} 
+  if (!userId) { return null}
   if (userArray.find( movie => movie.movie_id === movieCard.movie_id)) {
-    alert('You have already faved that dude');
+    return (dispatch) => dispatch(duplicateFav(true));
   } else {
     return (dispatch) => {
       fetch('api/users/favorites/new/', {
@@ -41,15 +42,14 @@ export const postToFavorites = (movieCard, userId, userArray) => {
       })
       .then(res => res.json())
       .then(dispatch(fetchFavorites(userId)))
- 
     }
   }
 };
 
 export const fetchRemoveFavorite = (userId, favId) => {
 	console.log('fetch rm', userId, favId)
-   return (dispatch) => {	
-   fetch(`api/users/${userId}/favorites/${favId}`,{	
+   return (dispatch) => {
+   fetch(`api/users/${userId}/favorites/${favId}`,{
      method:'delete',
      headers: {'Content-Type': 'application/json'}
    } )
@@ -60,7 +60,7 @@ export const fetchRemoveFavorite = (userId, favId) => {
 };
 
 export const fetchFavorites = (userId) => {
-   
+
   return (dispatch) => {
     fetch(`api/users/${userId}/favorites/`)
       .then(res => res.json())

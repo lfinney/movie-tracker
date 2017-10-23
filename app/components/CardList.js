@@ -5,26 +5,13 @@ import Card from './Card';
 import Slider from 'react-slick';
 import sliderOptions from './sliderOptions';
 import dataCleaner from '../helpers/dataCleaner';
-import { fetchRemoveFavorite } from '../helpers/movieHelper';
+import { fetchRemoveFavorite } from '../helpers/movieHelper'
+import PromptContainer from '../containers/PromptContainer';
 
 export default class CardList extends Component {
   constructor() {
     super();
   }
-
-  // componentDidMount() {
-  //   console.log(this.props);
-  //   // this.props.fetchData(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeys.lukeApi}&language=en-US&page=1`);
-  // }
-
-  // mapOverData() {
-  //   this.props.items.results.map( result => {
-  //     return (
-  //       <Card title={result.title}/>
-  //     )
-  //   })
-  // }
-
   render() {
 console.log(fetchRemoveFavorite(),'render of cardlist' )
     return (
@@ -37,6 +24,10 @@ console.log(fetchRemoveFavorite(),'render of cardlist' )
         {
           Object.keys(this.props.items).length &&
           <div className="card-list-div">
+            {
+              this.props.dupFav &&
+              <PromptContainer  className="login-error"/>
+            }
             {this.props.items.results.map((result, index) => {
             return (<Card
               movieData={dataCleaner(result)}
@@ -46,7 +37,7 @@ console.log(fetchRemoveFavorite(),'render of cardlist' )
 	      removeFav={fetchRemoveFavorite}
 	      type="home"
 	      key={index}
-	      />)    
+	      />)
           })}
         </div>
         }
@@ -59,5 +50,6 @@ CardList.propTypes = {
   fetchData: PropTypes.func,
   addToFavorites: PropTypes.func,
   userId: PropTypes.number,
-  items: PropTypes.object
+  items: PropTypes.object,
+  dupFav: PropTypes.bool
 };
