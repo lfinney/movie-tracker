@@ -4,7 +4,36 @@ exports[`Card should render component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card />,
+  Symbol(enzyme.__unrendered__): <Card
+    addToFavorites={[Function]}
+    movieData={
+      Object {
+        "movie_id": 346364,
+        "overview": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+        "poster_path": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+        "release_date": "2017-09-05",
+        "title": "It",
+        "vote_average": 7.4,
+      }
+    }
+    removeFav={[Function]}
+    type="home"
+    userFavArray={
+      Array [
+        Object {
+          "id": 12,
+          "movie_id": 346364,
+          "overview": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+          "poster_path": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+          "release_date": "2017-09-05",
+          "title": "It",
+          "user_id": 2,
+          "vote_average": 7.4,
+        },
+      ]
+    }
+    userId="2"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,10 +46,171 @@ ShallowWrapper {
     "key": null,
     "nodeType": "host",
     "props": Object {
-      "children": undefined,
+      "children": Array [
+        <img
+          src="https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
+        />,
+        <img
+          className="fav-icon"
+          src="../styles/assets/fav-icon.svg"
+        />,
+        <div
+          className="card-text"
+        >
+          <p
+            className="title"
+          >
+            It
+          </p>
+          <p
+            className="date"
+          >
+            September 4, 2017
+          </p>
+          <p>
+            Avg. User Rating: 
+            7.4
+          </p>
+          <p>
+            In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.
+          </p>
+          <button
+            onClick={[Function]}
+          >
+            Favorite
+          </button>
+        </div>,
+      ],
+      "className": "card-div favorite",
     },
     "ref": null,
-    "rendered": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "fav-icon",
+          "src": "../styles/assets/fav-icon.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="title"
+            >
+              It
+            </p>,
+            <p
+              className="date"
+            >
+              September 4, 2017
+            </p>,
+            <p>
+              Avg. User Rating: 
+              7.4
+            </p>,
+            <p>
+              In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.
+            </p>,
+            <button
+              onClick={[Function]}
+            >
+              Favorite
+            </button>,
+            false,
+          ],
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "It",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "It",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "September 4, 2017",
+              "className": "date",
+            },
+            "ref": null,
+            "rendered": "September 4, 2017",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Avg. User Rating: ",
+                7.4,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Avg. User Rating: ",
+              7.4,
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+            },
+            "ref": null,
+            "rendered": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Favorite",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Favorite",
+            "type": "button",
+          },
+          false,
+        ],
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +219,171 @@ ShallowWrapper {
       "key": null,
       "nodeType": "host",
       "props": Object {
-        "children": undefined,
+        "children": Array [
+          <img
+            src="https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg"
+          />,
+          <img
+            className="fav-icon"
+            src="../styles/assets/fav-icon.svg"
+          />,
+          <div
+            className="card-text"
+          >
+            <p
+              className="title"
+            >
+              It
+            </p>
+            <p
+              className="date"
+            >
+              September 4, 2017
+            </p>
+            <p>
+              Avg. User Rating: 
+              7.4
+            </p>
+            <p>
+              In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.
+            </p>
+            <button
+              onClick={[Function]}
+            >
+              Favorite
+            </button>
+          </div>,
+        ],
+        "className": "card-div favorite",
       },
       "ref": null,
-      "rendered": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://image.tmdb.org/t/p/w500//9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "fav-icon",
+            "src": "../styles/assets/fav-icon.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="title"
+              >
+                It
+              </p>,
+              <p
+                className="date"
+              >
+                September 4, 2017
+              </p>,
+              <p>
+                Avg. User Rating: 
+                7.4
+              </p>,
+              <p>
+                In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.
+              </p>,
+              <button
+                onClick={[Function]}
+              >
+                Favorite
+              </button>,
+              false,
+            ],
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "It",
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": "It",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "September 4, 2017",
+                "className": "date",
+              },
+              "ref": null,
+              "rendered": "September 4, 2017",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Avg. User Rating: ",
+                  7.4,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Avg. User Rating: ",
+                7.4,
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+              },
+              "ref": null,
+              "rendered": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorite",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Favorite",
+              "type": "button",
+            },
+            false,
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],

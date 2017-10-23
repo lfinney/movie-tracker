@@ -4,7 +4,19 @@ exports[`UserForm should render component 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <UserForm />,
+  Symbol(enzyme.__unrendered__): <UserForm
+    activeUser={
+      Object {
+        "email": "edgar@thecat.com",
+        "id": 2,
+        "name": "Edgar",
+        "password": "catnip",
+      }
+    }
+    postUserSignUp={[Function]}
+    userLoginError="false"
+    verifyUserLogin={[Function]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,6 +30,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div>
+        <Redirect
+          push={false}
+          to="/"
+        />
+        <Connect(Prompt)
+          className="login-error"
+        />
         <input
           onChange={[Function]}
           placeholder="email"
@@ -50,7 +69,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
+          <Redirect
+            push={false}
+            to="/"
+          />,
+          <Connect(Prompt)
+            className="login-error"
+          />,
           <input
             onChange={[Function]}
             placeholder="email"
@@ -78,7 +103,29 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        undefined,
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "push": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "className": "login-error",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": null,
@@ -144,6 +191,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div>
+          <Redirect
+            push={false}
+            to="/"
+          />
+          <Connect(Prompt)
+            className="login-error"
+          />
           <input
             onChange={[Function]}
             placeholder="email"
@@ -176,7 +230,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            <Redirect
+              push={false}
+              to="/"
+            />,
+            <Connect(Prompt)
+              className="login-error"
+            />,
             <input
               onChange={[Function]}
               placeholder="email"
@@ -204,7 +264,29 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "push": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "className": "login-error",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": null,

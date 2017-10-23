@@ -28,32 +28,34 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+          className="left"
           replace={false}
           to="/"
         >
           Home
         </Link>,
         <Link
-          replace={false}
-          to="/login"
-        >
-          Login
-        </Link>,
-        <Link
+          className="left"
           replace={false}
           to="/favorites"
         >
           Favorites
         </Link>,
-        <div>
-          You are logged in hehe
-        </div>,
+        <Link
+          className="right"
+          replace={false}
+          to="/login"
+        >
+          Login
+        </Link>,
         <button
-          onClick={undefined}
+          className="right"
+          onClick={[Function]}
         >
           Sign Out
         </button>,
       ],
+      "id": "nav-div",
     },
     "ref": null,
     "rendered": Array [
@@ -63,6 +65,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Home",
+          "className": "left",
           "replace": false,
           "to": "/",
         },
@@ -75,20 +78,8 @@ ShallowWrapper {
         "key": null,
         "nodeType": "class",
         "props": Object {
-          "children": "Login",
-          "replace": false,
-          "to": "/login",
-        },
-        "ref": null,
-        "rendered": "Login",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "class",
-        "props": Object {
           "children": "Favorites",
+          "className": "left",
           "replace": false,
           "to": "/favorites",
         },
@@ -99,13 +90,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": null,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": "You are logged in hehe",
+          "children": "Login",
+          "className": "right",
+          "replace": false,
+          "to": "/login",
         },
         "ref": null,
-        "rendered": "You are logged in hehe",
-        "type": "div",
+        "rendered": "Login",
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -113,7 +107,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Sign Out",
-          "onClick": undefined,
+          "className": "right",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": "Sign Out",
@@ -130,32 +125,34 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+            className="left"
             replace={false}
             to="/"
           >
             Home
           </Link>,
           <Link
-            replace={false}
-            to="/login"
-          >
-            Login
-          </Link>,
-          <Link
+            className="left"
             replace={false}
             to="/favorites"
           >
             Favorites
           </Link>,
-          <div>
-            You are logged in hehe
-          </div>,
+          <Link
+            className="right"
+            replace={false}
+            to="/login"
+          >
+            Login
+          </Link>,
           <button
-            onClick={undefined}
+            className="right"
+            onClick={[Function]}
           >
             Sign Out
           </button>,
         ],
+        "id": "nav-div",
       },
       "ref": null,
       "rendered": Array [
@@ -165,6 +162,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Home",
+            "className": "left",
             "replace": false,
             "to": "/",
           },
@@ -177,20 +175,8 @@ ShallowWrapper {
           "key": null,
           "nodeType": "class",
           "props": Object {
-            "children": "Login",
-            "replace": false,
-            "to": "/login",
-          },
-          "ref": null,
-          "rendered": "Login",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "class",
-          "props": Object {
             "children": "Favorites",
+            "className": "left",
             "replace": false,
             "to": "/favorites",
           },
@@ -201,13 +187,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": null,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": "You are logged in hehe",
+            "children": "Login",
+            "className": "right",
+            "replace": false,
+            "to": "/login",
           },
           "ref": null,
-          "rendered": "You are logged in hehe",
-          "type": "div",
+          "rendered": "Login",
+          "type": [Function],
         },
         Object {
           "instance": null,
@@ -215,7 +204,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Sign Out",
-            "onClick": undefined,
+            "className": "right",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Sign Out",
